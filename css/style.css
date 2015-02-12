@@ -163,16 +163,18 @@ p.title {
 }
 .home-intro {
     text-align: center;
-    width: 700px;
+    width: 100%;
     margin: 0 auto;
 }
 .stadium {
-    background: url(../images/stadium-light.png) no-repeat center top fixed;
     width: 100%;
-    min-height: 260px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
+    z-index: -1;
+}
+.stadium img {
+    width: 100%
 }
 #preview {
     cursor: pointer;
@@ -531,7 +533,66 @@ p.caption {
     transform: translateY(500px);
     opacity: 1;
 }
+.translateup {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+.translatedown {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
 .spacer {
     height: 200px;
     width: 100%;
+}
+.down {
+    margin-top: 40px;
+}
+.hided {
+    opacity: 0;
+}
+.showed {
+    opacity: 1;
+}
+.spacer {
+    min-height: 100px;
+}
+.spacer.s0 {
+    min-height: 1px;
+}
+.spacer.s1 {
+    min-height: 100px;
+}
+.spacer.s2 {
+    min-height: 200px;
+}
+.spacer.s3 {
+    min-height: 300px;
+}
+.spacer.s4 {
+    min-height: 400px;
+}
+.spacer.s5 {
+    min-height: 500px;
+}
+.spacer.s6 {
+    min-height: 600px;
+}
+.spacer.s7 {
+    min-height: 700px;
+}
+.spacer.s8 {
+    min-height: 800px;
+}
+.spacer.s9 {
+    min-height: 900px;
+}
+.spacer.s10 {
+    min-height: 1000px;
 }
