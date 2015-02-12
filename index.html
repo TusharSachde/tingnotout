@@ -49,7 +49,7 @@
         <img src="images/stadium-light.png" alt="" class="img-responsive">
     </div>
     <!--Fixed Nav Bar-->
-    <nav class="navbar-fixed-top">
+    <nav class="navbar-fixed-top navigator translateup">
         <div class="container navigation">
 
             <div class="logo">
@@ -108,8 +108,8 @@
 
         </div>
     </nav>
-    
-    
+
+
     <div class="container" id="fullpage">
         <!--Home-->
         <div class="container outer-container section" data-anchor="home" id="section0">
@@ -139,16 +139,52 @@
                                     <p>
                                         The name of our production house - 200NOTOUT* is a tribute to this extraordinary, spirited innings of the master-blaster.
                                     </p>
+                                    <img src="images/notout200text.png" alt="200 not out" class="preview-logo-text" />
                                 </div>
 
-                                <img src="images/notout200text.png" alt="200 not out" class="preview-logo-text hide" />
                             </div>
-
+                            
+                            
+                            <div class="tools horizontal hided">
+                                <ul>
+                                    <li data-rollover="films-icon" data-tab="tab-films" data-nav="films">
+                                        <a href="#our-innings">
+                                            <div class="tool-icon">
+                                                <img src="images/films-icon.png" alt="films" />
+                                            </div>
+                                            <p class="caption">
+                                                Fiilms
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li data-rollover="cinemas-icon" data-tab="tab-cinemas" data-nav="cinemas">
+                                        <a href="#our-innings">
+                                            <div class="tool-icon">
+                                                <img src="images/cinemas-icon.png" alt="cinemas" />
+                                            </div>
+                                            <p class="caption">
+                                                Cinemas
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li data-rollover="entertainment-icon" data-tab="tab-entertainment" data-nav="entertainment">
+                                        <a href="#our-innings">
+                                            <div class="tool-icon">
+                                                <img src="images/entertainment-icon.png" alt="entertainment" />
+                                            </div>
+                                            <p class="caption">
+                                                Entertainment
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
 
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <div class="spacer s2"></div>
 
@@ -158,7 +194,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 1500,
-                        offset: 90
+                        offset: 140
                     })
                         .setPin("#pin1")
                         .addTo(controller);
@@ -179,7 +215,7 @@
                     var scene2 = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 1,
-                        offset: 300
+                        offset: 350
                     })
                         .addTo(controller);
 
@@ -203,18 +239,38 @@
 
                     scene2.setTween(tween2);
                     scene2.addIndicators();
-                    
+
                     var scene2 = new ScrollScene({
                         triggerElement: "#trigger1",
-                        duration: 500,
+                        duration: 300,
                         offset: 700
                     })
                         .addTo(controller);
-                    
+
                     var tween3 = TweenMax.to(".stadium.translateup", 1, {
                         className: "+=translatedown"
                     });
                     scene2.setTween(tween3);
+                    scene2.addIndicators();
+
+                    var scene2 = new ScrollScene({
+                        triggerElement: "#trigger1",
+                        duration: 400,
+                        offset: 1000
+                    })
+                        .addTo(controller);
+
+                    var tween4 = TweenMax.to(".navigator.translateup", 1, {
+                        className: "+=translatedown"
+                    });
+                    
+                    var tween5 = TweenMax.to(".tools.hided", 1, {
+                        className: "+=showed"
+                    });
+                    
+                    scene2.setTween(tween4);
+                    scene2.setTween(tween5);
+
                     scene2.addIndicators();
 
 
@@ -222,45 +278,7 @@
                 });
             </script>
 
-            <div class="container" id="landing">
-                <div class="sachin">
-                    <img src="images/sachin-tendulkar.png" alt="sachin-tendulkar" />
-                </div>
-                <div class="tools horizontal">
-                    <ul>
-                        <li data-rollover="films-icon" data-tab="tab-films" data-nav="films">
-                            <a href="#our-innings">
-                                <div class="tool-icon">
-                                    <img src="images/films-icon.png" alt="films" />
-                                </div>
-                                <p class="caption">
-                                    Fiilms
-                                </p>
-                            </a>
-                        </li>
-                        <li data-rollover="cinemas-icon" data-tab="tab-cinemas" data-nav="cinemas">
-                            <a href="#our-innings">
-                                <div class="tool-icon">
-                                    <img src="images/cinemas-icon.png" alt="cinemas" />
-                                </div>
-                                <p class="caption">
-                                    Cinemas
-                                </p>
-                            </a>
-                        </li>
-                        <li data-rollover="entertainment-icon" data-tab="tab-entertainment" data-nav="entertainment">
-                            <a href="#our-innings">
-                                <div class="tool-icon">
-                                    <img src="images/entertainment-icon.png" alt="entertainment" />
-                                </div>
-                                <p class="caption">
-                                    Entertainment
-                                </p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+
         </div>
     </div>
 
