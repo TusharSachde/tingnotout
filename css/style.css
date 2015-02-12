@@ -464,7 +464,7 @@ p.caption {
 /*start contact us*/
 
 .microphone {
-    margin: -218px 0 0 0px;
+    margin: 0 0 0 0px;
     float: left;
 }
 .microphone-res {
@@ -472,7 +472,7 @@ p.caption {
     float: left;
 }
 .address {
-    margin: -20px 0 0 50px;
+    margin: 200px 0 0 50px;
     float: left;
 }
 .equipments,
