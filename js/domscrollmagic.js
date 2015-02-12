@@ -1,4 +1,4 @@
-isdebug = true;
+isdebug = false;
 var controller;
 
 
