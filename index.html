@@ -142,44 +142,45 @@
                                     <img src="images/notout200text.png" alt="200 not out" class="preview-logo-text" />
                                 </div>
 
-                            </div>
-                            
-                            
-                            <div class="tools horizontal hided">
-                                <ul>
-                                    <li data-rollover="films-icon" data-tab="tab-films" data-nav="films">
-                                        <a href="#our-innings">
-                                            <div class="tool-icon">
-                                                <img src="images/films-icon.png" alt="films" />
-                                            </div>
-                                            <p class="caption">
-                                                Fiilms
-                                            </p>
-                                        </a>
-                                    </li>
-                                    <li data-rollover="cinemas-icon" data-tab="tab-cinemas" data-nav="cinemas">
-                                        <a href="#our-innings">
-                                            <div class="tool-icon">
-                                                <img src="images/cinemas-icon.png" alt="cinemas" />
-                                            </div>
-                                            <p class="caption">
-                                                Cinemas
-                                            </p>
-                                        </a>
-                                    </li>
-                                    <li data-rollover="entertainment-icon" data-tab="tab-entertainment" data-nav="entertainment">
-                                        <a href="#our-innings">
-                                            <div class="tool-icon">
-                                                <img src="images/entertainment-icon.png" alt="entertainment" />
-                                            </div>
-                                            <p class="caption">
-                                                Entertainment
-                                            </p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
 
+
+                                <div class="tools horizontal hided">
+                                    <ul>
+                                        <li data-rollover="films-icon" data-tab="tab-films" data-nav="films">
+                                            <a href="#our-innings">
+                                                <div class="tool-icon">
+                                                    <img src="images/films-icon.png" alt="films" />
+                                                </div>
+                                                <p class="caption">
+                                                    Films
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li data-rollover="cinemas-icon" data-tab="tab-cinemas" data-nav="cinemas">
+                                            <a href="#our-innings">
+                                                <div class="tool-icon">
+                                                    <img src="images/cinemas-icon.png" alt="cinemas" />
+                                                </div>
+                                                <p class="caption">
+                                                    Cinemas
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li data-rollover="entertainment-icon" data-tab="tab-entertainment" data-nav="entertainment">
+                                            <a href="#our-innings">
+                                                <div class="tool-icon">
+                                                    <img src="images/entertainment-icon.png" alt="entertainment" />
+                                                </div>
+                                                <p class="caption">
+                                                    Entertainment
+                                                </p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -190,6 +191,13 @@
 
             <script>
                 $(document).ready(function($) {
+
+
+                    $("#pin1").mousemove(function(e) {
+                        var x = e.clientX;
+                        var y = e.clientY;
+                    });
+
                     // scene Sachin
                     var scene = new ScrollScene({
                         triggerElement: "#trigger1",
@@ -201,82 +209,147 @@
 
                     scene.addIndicators();
 
-                    var tween = TweenMax.to(".cape", 1, {
+                    var cape = TweenMax.to(".cape", 1, {
                         className: "+=capedown"
                     });
 
-                    scene.setTween(tween);
+                    scene.setTween(cape);
 
                     scene.on("end", function(event) {
                         $(".cape").toggle();
                     });
 
 
-                    var scene2 = new ScrollScene({
+                    var scene = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 1,
-                        offset: 350
+                        offset: 300
                     })
                         .addTo(controller);
 
-                    var tween2 = TweenMax.to(".down.showed", 1, {
+                    var down = TweenMax.to(".down.showed", 1, {
                         className: "+=hidden"
                     });
 
-                    scene2.setTween(tween2);
-                    scene2.addIndicators();
+                    scene.setTween(down);
+                    scene.addIndicators();
 
-                    var scene2 = new ScrollScene({
+                    var scene = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 500,
                         offset: 600
                     })
                         .addTo(controller);
 
-                    var tween2 = TweenMax.to(".text-up.hided", 1, {
+                    var textup = TweenMax.to(".text-up.hided", 1, {
                         className: "+=showed"
                     });
 
-                    scene2.setTween(tween2);
-                    scene2.addIndicators();
+                    scene.setTween(textup);
+                    scene.addIndicators();
 
-                    var scene2 = new ScrollScene({
+                    var scene = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 300,
                         offset: 700
                     })
                         .addTo(controller);
 
-                    var tween3 = TweenMax.to(".stadium.translateup", 1, {
+                    var stadium = TweenMax.to(".stadium.translateup", 1, {
                         className: "+=translatedown"
                     });
-                    scene2.setTween(tween3);
-                    scene2.addIndicators();
+                    scene.setTween(stadium);
+                    scene.addIndicators();
 
-                    var scene2 = new ScrollScene({
+                    var scene = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 400,
                         offset: 1000
                     })
                         .addTo(controller);
 
-                    var tween4 = TweenMax.to(".navigator.translateup", 1, {
+                    var navigator = TweenMax.to(".navigator.translateup", 1, {
                         className: "+=translatedown"
                     });
-                    
-                    var tween5 = TweenMax.to(".tools.hided", 1, {
+                    scene.setTween(navigator);
+                    scene.addIndicators();
+
+
+                    var scene = new ScrollScene({
+                        triggerElement: "#trigger1",
+                        duration: 400,
+                        offset: 1000
+                    })
+                        .addTo(controller);
+
+                    var tools = TweenMax.to(".tools.hided", 1, {
                         className: "+=showed"
                     });
-                    
-                    scene2.setTween(tween4);
-                    scene2.setTween(tween5);
 
-                    scene2.addIndicators();
+                    scene.setTween(tools);
+                    scene.addIndicators();
 
+
+                    var scene = new ScrollScene({
+                        triggerElement: "#trigger1",
+                        duration: 200,
+                        offset: 1000
+                    })
+                        .addTo(controller);
+
+                    var textgo = TweenMax.to(".text-up", 1, {
+                        className: "+=goaway"
+                    });
+
+                    scene.setTween(textgo);
+                    scene.addIndicators();
 
                     // show indicators (requires debug extension)
                 });
             </script>
+
+            <!--About Us-->
+
+            <div class="container outer-container" id="pin2">
+                <div class="umpire translatebot">
+                    <img src="images/umpire.png" alt="Umpire" />
+                </div>
+                
+                <div class="balls hided">
+                    <div class="flying-ball-real">
+                        <img src="images/flying-ball-real.png" alt="flying-ball-real" />
+                    </div>
+                    <div class="flying-ball-white-small">
+                        <img src="images/flying-ball-white-small.png" alt="flying-ball-white-small" />
+                    </div>
+                    <div class="flying-ball-white">
+                        <img src="images/flying-ball-white.png" alt="flying-ball-white" />
+                    </div>
+                    <div class="flying-ball-real-small">
+                        <img src="images/flying-ball-real-small.png" alt="flying-ball-real-small" />
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="about-curve">
+                            <div class="about-content">
+                                <p class="title">
+                                    About us
+                                </p>
+                                <p>
+                                    Welcome to 2OONOTOUT*. As our name suggests we are a new age Film production company and believe in doing our work as passionately as we follow our cricket. We are on field to play a splendid innings in the Commercial, Film and Event industry alongside our sister company, Famos Cine Equipmentss - one of the largest film equipment rental companies in India.
+                                </p>
+                                <p>
+                                    We strongly believe in playing the best possible innings that we could be proud of. It is this commitment that brings top-notch international and Indian directors and production talents to work with us. At 2OONOTOUT*, we go beyond the clichéd concept of a production house. We produce stimulating content, provide clockwork efficient production services and nurture creative talents.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spacer s2"></div>
 
 
         </div>

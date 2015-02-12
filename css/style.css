@@ -164,6 +164,7 @@ p.title {
     text-align: center;
     width: 100%;
     margin: 0 auto;
+    position: relative;
 }
 .stadium {
     width: 100%;
@@ -185,14 +186,19 @@ p.title {
 #landing {
     display: none;
 }
-
 /*end  home*/
 
 /*start tool*/
 
 .tools {
-    width: 500px;
-    margin: 0 auto;
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 .tools ul {
     float: left;
@@ -252,9 +258,9 @@ p.caption {
     width: 740px;
 }
 .umpire {
-    bottom: 50px;
-    left: -69px;
-    position: absolute;
+    bottom: -3px;
+    left: 6.5%;
+    position: fixed;
 }
 .flying-ball-real {
     position: absolute;
@@ -513,6 +519,7 @@ p.caption {
     -o-transform: translateY(0px);
     transform: translateY(0px);
     opacity: 1;
+    z-index: 9;
 }
 /*Animation End*/
 
@@ -523,11 +530,11 @@ p.caption {
     padding-top: 300px;
 }
 .capedown {
-    -webkit-transform: translateY(500px);
-    -moz-transform: translateY(500px);
-    -ms-transform: translateY(500px);
-    -o-transform: translateY(500px);
-    transform: translateY(500px);
+    -webkit-transform: translateY(700px);
+    -moz-transform: translateY(700px);
+    -ms-transform: translateY(700px);
+    -o-transform: translateY(700px);
+    transform: translateY(700px);
     opacity: 1;
 }
 .translateup {
@@ -536,6 +543,13 @@ p.caption {
     -ms-transform: translateY(-100%);
     -o-transform: translateY(-100%);
     transform: translateY(-100%);
+}
+.translatebot {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
 }
 .translatedown {
     -webkit-transform: translateY(0);
@@ -556,6 +570,12 @@ p.caption {
 }
 .showed {
     opacity: 1;
+}
+.goaway {
+    opacity: 0;
+}
+.text-up {
+    margin-top: 30px;
 }
 .spacer {
     min-height: 100px;
@@ -592,4 +612,7 @@ p.caption {
 }
 .spacer.s10 {
     min-height: 1000px;
+}
+#pin2 {
+    position: relative;
 }
