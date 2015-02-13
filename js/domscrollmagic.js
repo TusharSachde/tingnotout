@@ -43,6 +43,8 @@ $(document).ready(function ($) {
 
             var tween2 = TweenMax.to("[triggerElement]:eq(" + i + ")", 1, {
                 css: tocss,
+                ease: Power3.easeOut,
+                y: 0
             });
             scene2.setTween(tween2);
             if (isdebug) {
