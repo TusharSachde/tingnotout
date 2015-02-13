@@ -616,3 +616,22 @@ p.caption {
 #pin2 {
     position: relative;
 }
+img.microphoneonly {
+    -webkit-transform: rotate(90deg) translateX(-233px) translateY(233px);
+    -moz-transform: rotate(90deg) translateX(-233px) translateY(233px);
+    -ms-transform: rotate(90deg) translateX(-233px) translateY(233px);
+    -o-transform: rotate(90deg) translateX(-233px) translateY(233px);
+    transform: rotate(90deg) translateX(-233px) translateY(233px);
+    opacity: 0.0;
+}
+img.bubbeonly {
+    height: 0px;
+    -webkit-transform: translateY(190px);
+    -moz-transform: translateY(190px);
+    -ms-transform: translateY(190px);
+    -o-transform: translateY(190px);
+    transform: translateY(190px);
+}
+.address {
+    opacity: 0;
+}
