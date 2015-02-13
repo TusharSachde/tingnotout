@@ -35,7 +35,7 @@
     <script src="js/jcarousel.responsive.js" type="text/javascript"></script>
     <script src="js/cssjson.js" type="text/javascript"></script>
     <script src="js/domscrollmagic.js" type="text/javascript"></script>
-    
+
 
 </head>
 
@@ -43,7 +43,7 @@
 
     <script>
         var controller;
-        $(document).ready(function ($) {
+        $(document).ready(function($) {
             // init controller
             controller = new ScrollMagic();
         });
@@ -88,22 +88,22 @@
                 </li>
             </ul>
             <ul id="menu" class="menu collapse navbar-collapse">
-                <li data-menuanchor="about-us">
-                    <a href="#about-us">About Us</a>
+                <li id="about-us">
+                    <a href="#pin2">About Us</a>
                 </li>
                 <!-- <li data-menuanchor="services">
                     <a href="#services">Services</a>
                 </li>-->
-                <li data-menuanchor="our-innings">
-                    <a href="#our-innings">Our Innings</a>
+                <li id="our-innings">
+                    <a href="#pin3">Our Innings</a>
                     <!--<ul>
                         <li><a>Films</a></li>
                         <li><a>Cinemas</a></li>
                         <li><a>Entertainment</a></li>
                     </ul>-->
                 </li>
-                <li data-menuanchor="contact-us">
-                    <a href="#contact-us">Contact Us</a>
+                <li id="contact-us">
+                    <a href="#pin4">Contact Us</a>
                 </li>
 
             </ul>
@@ -191,23 +191,23 @@
             </div>
 
 
-            <div class="spacer s2"></div>
+
 
             <script>
-                $(document).ready(function ($) {
+                $(document).ready(function($) {
 
 
-                    $("#pin1").mousemove(function (e) {
+                    $("#pin1").mousemove(function(e) {
                         var x = e.clientX;
                         var y = e.clientY;
                     });
 
                     // scene Sachin
                     var scene = new ScrollScene({
-                            triggerElement: "#trigger1",
-                            duration: 1500,
-                            offset: 140
-                        })
+                        triggerElement: "#trigger1",
+                        duration: 1500,
+                        offset: 140
+                    })
                         .setPin("#pin1")
                         .addTo(controller);
 
@@ -219,16 +219,16 @@
 
                     scene.setTween(cape);
 
-                    scene.on("end", function (event) {
+                    scene.on("end", function(event) {
                         $(".cape").toggle();
                     });
 
 
                     var scene = new ScrollScene({
-                            triggerElement: "#trigger1",
-                            duration: 1,
-                            offset: 300
-                        })
+                        triggerElement: "#trigger1",
+                        duration: 1,
+                        offset: 300
+                    })
                         .addTo(controller);
 
                     var down = TweenMax.to(".down.showed", 1, {
@@ -239,10 +239,10 @@
                     // scene.addIndicators();
 
                     var scene = new ScrollScene({
-                            triggerElement: "#trigger1",
-                            duration: 500,
-                            offset: 600
-                        })
+                        triggerElement: "#trigger1",
+                        duration: 500,
+                        offset: 600
+                    })
                         .addTo(controller);
 
                     var textup = TweenMax.to(".text-up.hided", 1, {
@@ -250,26 +250,24 @@
                     });
 
                     scene.setTween(textup);
-                    // scene.addIndicators();
 
                     var scene = new ScrollScene({
-                            triggerElement: "#trigger1",
-                            duration: 300,
-                            offset: 700
-                        })
+                        triggerElement: "#trigger1",
+                        duration: 300,
+                        offset: 700
+                    })
                         .addTo(controller);
 
                     var stadium = TweenMax.to(".stadium.translateup", 1, {
                         className: "+=translatedown"
                     });
                     scene.setTween(stadium);
-                    // scene.addIndicators();
 
                     var scene = new ScrollScene({
-                            triggerElement: "#trigger1",
-                            duration: 400,
-                            offset: 1000
-                        })
+                        triggerElement: "#trigger1",
+                        duration: 400,
+                        offset: 1000
+                    })
                         .addTo(controller);
 
                     var navigator = TweenMax.to(".navigator.translateup", 1, {
@@ -280,10 +278,10 @@
 
 
                     var scene = new ScrollScene({
-                            triggerElement: "#trigger1",
-                            duration: 400,
-                            offset: 1000
-                        })
+                        triggerElement: "#trigger1",
+                        duration: 400,
+                        offset: 1000
+                    })
                         .addTo(controller);
 
                     var tools = TweenMax.to(".tools.hided", 1, {
@@ -295,10 +293,10 @@
 
 
                     var scene = new ScrollScene({
-                            triggerElement: "#trigger1",
-                            duration: 200,
-                            offset: 1000
-                        })
+                        triggerElement: "#trigger1",
+                        duration: 200,
+                        offset: 1000
+                    })
                         .addTo(controller);
 
                     var textgo = TweenMax.to(".text-up", 1, {
@@ -306,18 +304,22 @@
                     });
 
                     scene.setTween(textgo);
-                    // scene.addIndicators();
 
-                    // show indicators (requires debug extension)
+                    scene.on("end", function(event) {
+                        $(".preview-title").toggle();
+                    });
+
                 });
             </script>
 
             <!--About Us-->
-
+            <div id="trigger2"></div>
             <div class="container outer-container" id="pin2">
+
                 <div class="umpire translatebot">
                     <img src="images/umpire.png" alt="Umpire" />
                 </div>
+
 
                 <div class="balls hided">
                     <div class="flying-ball-real">
@@ -333,6 +335,7 @@
                         <img src="images/flying-ball-real-small.png" alt="flying-ball-real-small" />
                     </div>
                 </div>
+
 
                 <div class="row">
                     <div class="col-md-12">
@@ -353,12 +356,102 @@
                 </div>
             </div>
 
-            <div class="spacer s2"></div>
+
+
+            <script>
+                $(document).ready(function($) {
+
+                    // scene Sachin
+                    var scene = new ScrollScene({
+                        triggerElement: "#trigger2",
+                        duration: 1500,
+                        offset: 140
+                    })
+                        .setPin("#pin2")
+                        .setClassToggle("#about-us", "active") // add class toggle
+                    .addTo(controller);
+
+
+
+                    var scene = new ScrollScene({
+                        triggerElement: "#trigger2",
+                        duration: 300,
+                        offset: 140
+                    })
+                        .addTo(controller);
+
+                    var stadium = TweenMax.to(".stadium", 1, {
+                        className: "+=translatego"
+                    });
+                    scene.setTween(stadium);
+
+
+                    scene.addIndicators();
+
+
+                    var scene = new ScrollScene({
+                        triggerElement: "#trigger2",
+                        duration: 300,
+                        offset: 100
+                    })
+                        .addTo(controller);
+
+                    var umpire = TweenMax.to(".umpire.translatebot", 1, {
+                        className: "+=translatedown"
+                    });
+                    scene.setTween(umpire);
+
+                    var scene = new ScrollScene({
+                        triggerElement: "#trigger2",
+                        duration: 400,
+                        offset: 400
+                    })
+                        .addTo(controller);
+
+                    var about = TweenMax.to(".about-curve", 1, {
+                        className: "+=about-curve-width"
+                    });
+                    scene.setTween(about);
+
+                    var scene = new ScrollScene({
+                        triggerElement: "#trigger2",
+                        duration: 100,
+                        offset: 800
+                    })
+                        .addTo(controller);
+
+                    var balls = TweenMax.to(".balls.hided", 1, {
+                        className: "+=showed"
+                    });
+                    scene.setTween(balls);
+
+                });
+            </script>
+
 
 
         </div>
     </div>
 
+
+    <script>
+        $(document).ready(function($) {
+            $(document).on("click", "a[href^=#]", function(e) {
+                var id = $(this).attr("href");
+                if ($(id).length > 0) {
+                    e.preventDefault();
+
+                    // trigger scroll
+                    controller.scrollTo(id);
+
+                    // if supported by the browser we can even update the URL.
+                    if (window.history && window.history.pushState) {
+                        history.pushState("", document.title, id);
+                    }
+                }
+            });
+        });
+    </script>
     </footer>
 
 </body>
