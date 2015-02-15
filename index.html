@@ -211,7 +211,6 @@
                         .setPin("#pin1")
                         .addTo(controller);
 
-                    // scene.addIndicators();
 
                     var cape = TweenMax.to(".cape", 1, {
                         className: "+=capedown"
@@ -236,7 +235,7 @@
                     });
 
                     scene.setTween(down);
-                    // scene.addIndicators();
+
 
                     var scene = new ScrollScene({
                         triggerElement: "#trigger1",
@@ -274,7 +273,7 @@
                         className: "+=translatedown"
                     });
                     scene.setTween(navigator);
-                    // scene.addIndicators();
+
 
 
                     var scene = new ScrollScene({
@@ -289,7 +288,7 @@
                     });
 
                     scene.setTween(tools);
-                    // scene.addIndicators();
+
 
 
                     var scene = new ScrollScene({
@@ -302,7 +301,6 @@
                     var textgo = TweenMax.to(".text-up", 1, {
                         className: "+=goaway"
                     });
-
                     scene.setTween(textgo);
 
                     scene.on("end", function(event) {
@@ -322,7 +320,7 @@
 
 
                 <div class="balls hided">
-                    <div class="flying-ball-real">
+                    <div class="flying-ball-real flying">
                         <img src="images/flying-ball-real.png" alt="flying-ball-real" />
                     </div>
                     <div class="flying-ball-white-small">
@@ -331,7 +329,7 @@
                     <div class="flying-ball-white">
                         <img src="images/flying-ball-white.png" alt="flying-ball-white" />
                     </div>
-                    <div class="flying-ball-real-small">
+                    <div class="flying-ball-real-small flying2">
                         <img src="images/flying-ball-real-small.png" alt="flying-ball-real-small" />
                     </div>
                 </div>
@@ -361,16 +359,15 @@
             <script>
                 $(document).ready(function($) {
 
-                    // scene Sachin
+                    // Scene About Us 
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
-                        duration: 1500,
+                        duration: 1300,
                         offset: 140
                     })
                         .setPin("#pin2")
                         .setClassToggle("#about-us", "active") // add class toggle
                     .addTo(controller);
-
 
 
                     var scene = new ScrollScene({
@@ -384,10 +381,6 @@
                         className: "+=translatego"
                     });
                     scene.setTween(stadium);
-
-
-                    scene.addIndicators();
-
 
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
@@ -425,12 +418,257 @@
                     });
                     scene.setTween(balls);
 
+                    var scene = new ScrollScene({
+                        triggerElement: "#trigger2",
+                        duration: 300,
+                        offset: 1400
+                    })
+                        .addTo(controller);
+
+                    var umpirego = TweenMax.to(".umpire", 1, {
+                        className: "+=translatebotgo"
+                    });
+                    scene.setTween(umpirego);
+
+                    var scene = new ScrollScene({
+                        triggerElement: "#trigger2",
+                        duration: 200,
+                        offset: 1400
+                    })
+                        .addTo(controller);
+
+                    var balls = TweenMax.to(".balls", 1, {
+                        className: "+=goaway"
+                    });
+                    scene.setTween(balls);
+
+
+                    scene.on("end", function(event) {
+                        $(".balls").toggle();
+                    });
+
                 });
             </script>
 
 
+            <div id="trigger3"></div>
+            <div class="section-services" id="pin3">
+                <div class="hided innings1">
+                    <div class="service-popcorn flying2">
+                        <img alt="cloud-service" src="images/service-popcorn.png" class="service-popcorn" />
+                    </div>
 
+                    <div class="things">
+                        <img src="images/service-cloud-medium.png" alt="Cloud" class="cloud1 clouding">
+                        <img src="images/service-cloud-small.png" alt="Cloud" class="cloud2 clouding">
+                    </div>
+                </div>
+
+                <img src="images/services-popman.png" alt="Cloud" class="popman">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="cloud-service hided">
+                            <div class="service-content">
+                                <p class="title">
+                                    Our Innings
+                                </p>
+                                <p>
+                                    Having over 150 advertisements and short films to our credits. we have successfully established ourselves as one of the game changers in the sport of movie making. Our innings thus far has been a dramtics one with cameos by brands like Colgate, MRF, Maxx Mobile, Chevrolet, lenovo, ICICI Bank, Royal Challenge and many more.
+                                </p>
+                                <p>
+                                    Our gameplay continues and the next over is a mighty big one. In a yet-to-be titled movie, portraying the life and works of Master Blaster Sachin Tendulkar. we have James Erskine. a London-based award winning writer, director &amp; producer to direct this epic feature film. We have been working on this project for over a year now and this sure is an innings we will never forget!
+                                </p>
+                                <p class="big-sixes">
+                                    To check out our big sixes click on the below tabs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <script>
+                $(document).ready(function($) {
+
+                    // Scene About Us 
+                    var scene = new ScrollScene({
+                        triggerElement: "#trigger3",
+                        duration: 1300,
+                        offset: 140
+                    })
+                        .setPin("#pin3")
+                        .setClassToggle("#our-innings", "active") // add class toggle
+                    .addTo(controller);
+
+                    var popup = TweenMax.to(".popman", 1, {
+                        className: "+=popmanbounce"
+                    });
+                    var scene = new ScrollScene({
+                        triggerElement: "#trigger3",
+                        duration: 50,
+                        offset: 250
+                    })
+                        .setTween(popup)
+                        .addTo(controller);
+
+                    var innings = TweenMax.to(".cloud-service.hided", 1, {
+                        className: "+=showed"
+                    });
+
+                    var scene = new ScrollScene({
+                        triggerElement: "#trigger3",
+                        duration: 200,
+                        offset: 450
+                    })
+                        .setTween(innings)
+                        .addTo(controller);
+
+                    var innings1 = TweenMax.to(".innings1.hided", 1, {
+                        className: "+=showed"
+                    });
+                    var scene = new ScrollScene({
+                        triggerElement: "#trigger3",
+                        duration: 100,
+                        offset: 550
+                    })
+                        .setTween(innings1)
+                        .addTo(controller);
+
+                    var gocloud = TweenMax.to(".things", 1, {
+                        className: "+=goaway"
+                    });
+                    var scene = new ScrollScene({
+                        triggerElement: "#trigger3",
+                        duration: 100,
+                        offset: 1300
+                    })
+                        .setTween(gocloud)
+                        .addTo(controller);
+
+                    scene.on("end", function(event) {
+                        $(".things").toggle();
+                    });
+
+                });
+            </script>
+
+
+            <div id="footertrigger1"></div>
+            <div class="fp-tableCell" style="height: 300px;" triggerElement="#footertrigger1" duration="1500" offset="300" pin="true">
+                <div class="microphone">
+                    <img alt="microphone bubbe" class="microphoneonly" src="images/microphone_bubbe_01.png" triggerElement="#footertrigger1" duration="100" offset="400" tocss="transform:rotate(0deg);opacity:1;">
+                    <img alt="microphone bubbe" class="bubbeonly" src="images/microphone_bubbe_02.png" triggerElement="#footertrigger1" duration="100" offset="550" tocss="transform:rotate(0deg);height:466px;">
+
+                </div>
+                <div class="microphone-res">
+                    <img alt="microphone bubbe" src="images/microphone_res.png">
+                </div>
+                <div class="address" triggerElement="#footertrigger1" duration="100" offset="700" tocss="opacity:1;">
+                    <p class="title">
+                        Contact Us
+                    </p>
+                    <p>
+                        <span class="equipments">200NOTOUT*</span>
+                        <br>104, Gyandeep Society, Gulmohar X Rd: 7,
+                        <br>J V P D, Mumbai 400049
+                    </p>
+                    <p>
+                        Mobile : <span class="equipments">+91-99300 20200</span>
+                        <br>Tel : <span class="equipments">+91-22-26206200</span>
+                        <br>
+                    </p>
+                    <p>
+                        If you'd like to work / freelance with us.
+                        <br>drop in your CV with your area of interest
+                        <br>and expertise on: <a class="equipments" href="mailto:info@200notout.in">info@200notout.in
+                    </a>
+                    </p>
+                    <p>
+                        Also avail services of our sister company
+                        <br>
+                        <a class="equipments" href="http://www.fceindia.com" target="_blank">Famos Cine Equipmentss</a>
+                        - one of the largest
+                        <br>film equipment rental companies in India.
+                    </p>
+                </div>
+            </div>
         </div>
+
+
+        <div id="footertrigger1"></div>
+        <div class="fp-tableCell" style="height: 300px;" id="pin4">
+            <div class="microphone">
+                <img alt="microphone bubbe" class="microphoneonly" src="images/microphone_bubbe_01.png">
+                <img alt="microphone bubbe" class="bubbeonly" src="images/microphone_bubbe_02.png">
+
+            </div>
+            <div class="microphone-res">
+                <img alt="microphone bubbe" src="images/microphone_res.png">
+            </div>
+            <div class="address hided">
+                <p class="title">
+                    Contact Us
+                </p>
+                <p>
+                    <span class="equipments">200NOTOUT*</span>
+                    <br>104, Gyandeep Society, Gulmohar X Rd: 7,
+                    <br>J V P D, Mumbai 400049
+                </p>
+                <p>
+                    Mobile : <span class="equipments">+91-99300 20200</span>
+                    <br>Tel : <span class="equipments">+91-22-26206200</span>
+                    <br>
+                </p>
+                <p>
+                    If you'd like to work / freelance with us.
+                    <br>drop in your CV with your area of interest
+                    <br>and expertise on: <a class="equipments" href="mailto:info@200notout.in">info@200notout.in
+                    </a>
+                </p>
+                <p>
+                    Also avail services of our sister company
+                    <br>
+                    <a class="equipments" href="http://www.fceindia.com" target="_blank">Famos Cine Equipmentss</a>
+                    - one of the largest
+                    <br>film equipment rental companies in India.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function($) {
+
+            var gotools = TweenMax.to(".tools", 1, {
+                className: "+=goaway"
+            });
+
+            // Scene Contact
+            var scene = new ScrollScene({
+                triggerElement: "#footertrigger1",
+                duration: 1500,
+                offset: 300
+            })
+                .setPin("#pin4")
+                .setTween(gotools)
+                .setClassToggle("#contact-us", "active") // add class toggle
+            .addTo(controller);
+            
+            var scene = new ScrollScene({
+                triggerElement: "#footertrigger1",
+                duration: 100,
+                offset: 200
+            })
+                .setTween(gotools)
+            .addTo(controller);
+
+
+        });
+    </script>
+
+
+    </div>
     </div>
 
 
@@ -452,6 +690,8 @@
             });
         });
     </script>
+
+
     </footer>
 
 </body>
