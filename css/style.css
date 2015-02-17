@@ -157,6 +157,7 @@ p.title {
     width: 227px;
     margin: 0 auto;
     position: relative;
+    overflow: hidden;
 }
 .sachin.preview {
     margin-bottom: 0px;
@@ -489,10 +490,11 @@ p.caption {
 }
 .footer {
     bottom: 0;
+    left: 0;
     height: 45px;
-    position: absolute;
+    position: fixed;
     width: 100%;
-    display: none;
+    opacity: 0;
 }
 .notout-footer {
     background: url(../images/footer-bg.png) no-repeat left top;
@@ -684,11 +686,11 @@ img.bubbeonly {
     position: absolute;
     right: -8%;
     bottom: -5%;
-    -webkit-transform: translateY(100%);
-    -moz-transform: translateY(100%);
-    -ms-transform: translateY(100%);
-    -o-transform: translateY(100%);
-    transform: translateY(100%);
+    -webkit-transform: translateY(-300%);
+    -moz-transform: translateY(-300%);
+    -ms-transform: translateY(-300%);
+    -o-transform: translateY(-300%);
+    transform: translateY(-300%);
     opacity: 0;
 }
 .popmanbounce {
@@ -728,6 +730,12 @@ img.bubbeonly {
     -moz-animation: flying2 2s infinite;
     -o-animation: flying2 2s infinite;
     animation: flying2 2s infinite;
+}
+.updown {
+    -webkit-animation: updown 3s infinite;
+    -moz-animation: updown 3s infinite;
+    -o-animation: updown 3s infinite;
+    animation: updown 3s infinite;
 }
 @-webkit-keyframes flying {
     0% {
@@ -919,6 +927,72 @@ img.bubbeonly {
         -moz-transform: translateX(10px);
         -o-transform: translateX(10px);
         transform: translateX(10px);
+    }
+}
+
+@-webkit-keyframes updown {
+    0% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+    48% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+    100% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+}
+
+@-moz-keyframes updown {
+    0% {
+        -moz-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+    48% {
+        -moz-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+    100% {
+        -moz-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+}
+
+@-o-keyframes updown {
+    0% {
+        -o-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+    48% {
+        -o-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+    100% {
+        -o-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+}
+
+@keyframes updown {
+    0% {
+        -webkit-transform: translateY(5px);
+        -moz-transform: translateY(5px);
+        -o-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+    48% {
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -o-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+    100% {
+        -webkit-transform: translateY(5px);
+        -moz-transform: translateY(5px);
+        -o-transform: translateY(5px);
+        transform: translateY(5px);
     }
 }
 /*Fly Animation*/
