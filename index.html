@@ -43,7 +43,7 @@
 
     <script>
         var controller;
-        $(document).ready(function($) {
+        $(document).ready(function ($) {
             // init controller
             controller = new ScrollMagic();
         });
@@ -194,20 +194,20 @@
 
 
             <script>
-                $(document).ready(function($) {
+                $(document).ready(function ($) {
 
 
-                    $("#pin1").mousemove(function(e) {
+                    $("#pin1").mousemove(function (e) {
                         var x = e.clientX;
                         var y = e.clientY;
                     });
 
                     // scene Sachin
                     var scene = new ScrollScene({
-                        triggerElement: "#trigger1",
-                        duration: 1500,
-                        offset: 140
-                    })
+                            triggerElement: "#trigger1",
+                            duration: 1500,
+                            offset: 140
+                        })
                         .setPin("#pin1")
                         .addTo(controller);
 
@@ -218,16 +218,16 @@
 
                     scene.setTween(cape);
 
-                    scene.on("end", function(event) {
+                    scene.on("end", function (event) {
                         $(".cape").toggle();
                     });
 
 
                     var scene = new ScrollScene({
-                        triggerElement: "#trigger1",
-                        duration: 1,
-                        offset: 300
-                    })
+                            triggerElement: "#trigger1",
+                            duration: 1,
+                            offset: 300
+                        })
                         .addTo(controller);
 
                     var down = TweenMax.to(".down.showed", 1, {
@@ -238,10 +238,10 @@
 
 
                     var scene = new ScrollScene({
-                        triggerElement: "#trigger1",
-                        duration: 500,
-                        offset: 600
-                    })
+                            triggerElement: "#trigger1",
+                            duration: 500,
+                            offset: 600
+                        })
                         .addTo(controller);
 
                     var textup = TweenMax.to(".text-up.hided", 1, {
@@ -251,10 +251,10 @@
                     scene.setTween(textup);
 
                     var scene = new ScrollScene({
-                        triggerElement: "#trigger1",
-                        duration: 300,
-                        offset: 700
-                    })
+                            triggerElement: "#trigger1",
+                            duration: 300,
+                            offset: 700
+                        })
                         .addTo(controller);
 
                     var stadium = TweenMax.to(".stadium.translateup", 1, {
@@ -263,10 +263,10 @@
                     scene.setTween(stadium);
 
                     var scene = new ScrollScene({
-                        triggerElement: "#trigger1",
-                        duration: 400,
-                        offset: 1000
-                    })
+                            triggerElement: "#trigger1",
+                            duration: 400,
+                            offset: 1000
+                        })
                         .addTo(controller);
 
                     var navigator = TweenMax.to(".navigator.translateup", 1, {
@@ -277,10 +277,10 @@
 
 
                     var scene = new ScrollScene({
-                        triggerElement: "#trigger1",
-                        duration: 400,
-                        offset: 1000
-                    })
+                            triggerElement: "#trigger1",
+                            duration: 400,
+                            offset: 1000
+                        })
                         .addTo(controller);
 
                     var tools = TweenMax.to(".tools.hided", 1, {
@@ -292,10 +292,10 @@
 
 
                     var scene = new ScrollScene({
-                        triggerElement: "#trigger1",
-                        duration: 200,
-                        offset: 1000
-                    })
+                            triggerElement: "#trigger1",
+                            duration: 200,
+                            offset: 1000
+                        })
                         .addTo(controller);
 
                     var textgo = TweenMax.to(".text-up", 1, {
@@ -303,7 +303,7 @@
                     });
                     scene.setTween(textgo);
 
-                    scene.on("end", function(event) {
+                    scene.on("end", function (event) {
                         $(".preview-title").toggle();
                     });
 
@@ -357,24 +357,24 @@
 
 
             <script>
-                $(document).ready(function($) {
+                $(document).ready(function ($) {
 
                     // Scene About Us 
                     var scene = new ScrollScene({
-                        triggerElement: "#trigger2",
-                        duration: 1300,
-                        offset: 140
-                    })
+                            triggerElement: "#trigger2",
+                            duration: 1300,
+                            offset: 140
+                        })
                         .setPin("#pin2")
                         .setClassToggle("#about-us", "active") // add class toggle
-                    .addTo(controller);
+                        .addTo(controller);
 
 
                     var scene = new ScrollScene({
-                        triggerElement: "#trigger2",
-                        duration: 300,
-                        offset: 140
-                    })
+                            triggerElement: "#trigger2",
+                            duration: 300,
+                            offset: 140
+                        })
                         .addTo(controller);
 
                     var stadium = TweenMax.to(".stadium", 1, {
@@ -383,10 +383,10 @@
                     scene.setTween(stadium);
 
                     var scene = new ScrollScene({
-                        triggerElement: "#trigger2",
-                        duration: 300,
-                        offset: 100
-                    })
+                            triggerElement: "#trigger2",
+                            duration: 300,
+                            offset: 100
+                        })
                         .addTo(controller);
 
                     var umpire = TweenMax.to(".umpire.translatebot", 1, {
@@ -395,10 +395,10 @@
                     scene.setTween(umpire);
 
                     var scene = new ScrollScene({
-                        triggerElement: "#trigger2",
-                        duration: 400,
-                        offset: 400
-                    })
+                            triggerElement: "#trigger2",
+                            duration: 400,
+                            offset: 400
+                        })
                         .addTo(controller);
 
                     var about = TweenMax.to(".about-curve", 1, {
@@ -407,10 +407,10 @@
                     scene.setTween(about);
 
                     var scene = new ScrollScene({
-                        triggerElement: "#trigger2",
-                        duration: 100,
-                        offset: 800
-                    })
+                            triggerElement: "#trigger2",
+                            duration: 100,
+                            offset: 800
+                        })
                         .addTo(controller);
 
                     var balls = TweenMax.to(".balls.hided", 1, {
@@ -419,10 +419,10 @@
                     scene.setTween(balls);
 
                     var scene = new ScrollScene({
-                        triggerElement: "#trigger2",
-                        duration: 300,
-                        offset: 1400
-                    })
+                            triggerElement: "#trigger2",
+                            duration: 300,
+                            offset: 1400
+                        })
                         .addTo(controller);
 
                     var umpirego = TweenMax.to(".umpire", 1, {
@@ -431,10 +431,10 @@
                     scene.setTween(umpirego);
 
                     var scene = new ScrollScene({
-                        triggerElement: "#trigger2",
-                        duration: 200,
-                        offset: 1400
-                    })
+                            triggerElement: "#trigger2",
+                            duration: 200,
+                            offset: 1400
+                        })
                         .addTo(controller);
 
                     var balls = TweenMax.to(".balls", 1, {
@@ -443,7 +443,7 @@
                     scene.setTween(balls);
 
 
-                    scene.on("end", function(event) {
+                    scene.on("end", function (event) {
                         $(".balls").toggle();
                     });
 
@@ -489,26 +489,26 @@
             </div>
 
             <script>
-                $(document).ready(function($) {
+                $(document).ready(function ($) {
 
                     // Scene About Us 
                     var scene = new ScrollScene({
-                        triggerElement: "#trigger3",
-                        duration: 1300,
-                        offset: 140
-                    })
+                            triggerElement: "#trigger3",
+                            duration: 1300,
+                            offset: 140
+                        })
                         .setPin("#pin3")
                         .setClassToggle("#our-innings", "active") // add class toggle
-                    .addTo(controller);
+                        .addTo(controller);
 
                     var popup = TweenMax.to(".popman", 1, {
                         className: "+=popmanbounce"
                     });
                     var scene = new ScrollScene({
-                        triggerElement: "#trigger3",
-                        duration: 50,
-                        offset: 250
-                    })
+                            triggerElement: "#trigger3",
+                            duration: 50,
+                            offset: 250
+                        })
                         .setTween(popup)
                         .addTo(controller);
 
@@ -517,10 +517,10 @@
                     });
 
                     var scene = new ScrollScene({
-                        triggerElement: "#trigger3",
-                        duration: 200,
-                        offset: 450
-                    })
+                            triggerElement: "#trigger3",
+                            duration: 200,
+                            offset: 450
+                        })
                         .setTween(innings)
                         .addTo(controller);
 
@@ -528,10 +528,10 @@
                         className: "+=showed"
                     });
                     var scene = new ScrollScene({
-                        triggerElement: "#trigger3",
-                        duration: 100,
-                        offset: 550
-                    })
+                            triggerElement: "#trigger3",
+                            duration: 100,
+                            offset: 550
+                        })
                         .setTween(innings1)
                         .addTo(controller);
 
@@ -539,14 +539,14 @@
                         className: "+=goaway"
                     });
                     var scene = new ScrollScene({
-                        triggerElement: "#trigger3",
-                        duration: 100,
-                        offset: 1300
-                    })
+                            triggerElement: "#trigger3",
+                            duration: 100,
+                            offset: 1300
+                        })
                         .setTween(gocloud)
                         .addTo(controller);
 
-                    scene.on("end", function(event) {
+                    scene.on("end", function (event) {
                         $(".things").toggle();
                     });
 
@@ -555,7 +555,7 @@
 
 
             <div id="footertrigger1"></div>
-            <div class="fp-tableCell" style="height: 300px;" triggerElement="#footertrigger1" duration="1500" offset="300" pin="true">
+            <div class="fp-tableCell" style="height: 300px;" triggerElement="#footertrigger1" duration="800" offset="300" pin="true">
                 <div class="microphone">
                     <img alt="microphone bubbe" class="microphoneonly" src="images/microphone_bubbe_01.png" triggerElement="#footertrigger1" duration="100" offset="400" tocss="transform:rotate(0deg);opacity:1;">
                     <img alt="microphone bubbe" class="bubbeonly" src="images/microphone_bubbe_02.png" triggerElement="#footertrigger1" duration="100" offset="550" tocss="transform:rotate(0deg);height:466px;">
@@ -638,7 +638,7 @@
     </div>
 
     <script>
-        $(document).ready(function($) {
+        $(document).ready(function ($) {
 
             var gotools = TweenMax.to(".tools", 1, {
                 className: "+=goaway"
@@ -646,22 +646,73 @@
 
             // Scene Contact
             var scene = new ScrollScene({
-                triggerElement: "#footertrigger1",
-                duration: 1500,
-                offset: 300
-            })
+                    triggerElement: "#footertrigger1",
+                    duration: 1500,
+                    offset: 300
+                })
                 .setPin("#pin4")
                 .setTween(gotools)
                 .setClassToggle("#contact-us", "active") // add class toggle
-            .addTo(controller);
-            
+                .addTo(controller);
+
             var scene = new ScrollScene({
-                triggerElement: "#footertrigger1",
-                duration: 100,
-                offset: 200
-            })
+                    triggerElement: "#footertrigger1",
+                    duration: 100,
+                    offset: 200
+                })
                 .setTween(gotools)
-            .addTo(controller);
+                .addTo(controller);
+
+
+        });
+    </script>
+
+
+
+    <script>
+        var shouldscroll = true;
+
+        function scrollanimate(scrollto) {
+            shouldscroll = false;
+
+            var body = $("html, body");
+            var currentscroll = $(window).scrollTop();
+            var time = Math.abs(currentscroll - scrollto);
+            body.animate({
+                scrollTop: scrollto
+            }, time, 'linear', function () {
+                shouldscroll = true;
+            });
+        };
+
+
+        $(document).ready(function () {
+            var scrollstops = [0, 1467, 2902, 4194, 6116, 7831];
+
+            currentscroll = $(window).scrollTop();
+
+            $(window).scroll(function (data) {
+                if (shouldscroll) {
+                    console.log("Scrolling Startrs");
+                    newcurrentscroll = $(window).scrollTop();
+                    var scrollto = 0;
+                    for (var i = 0; i < scrollstops.length; i++) {
+                        if (scrollstops[i] > newcurrentscroll) {
+                            scrollto = i;
+                            break;
+                        }
+                    }
+                    if (newcurrentscroll > currentscroll) {
+                      //scroll down
+                        scrollanimate(scrollstops[i]-5);
+                    } if (newcurrentscroll < currentscroll) {
+                        //scroll up
+                        scrollanimate(scrollstops[i - 1]+5);
+                    }
+                    currentscroll = newcurrentscroll;
+                }
+            });
+
 
 
         });
@@ -673,8 +724,8 @@
 
 
     <script>
-        $(document).ready(function($) {
-            $(document).on("click", "a[href^=#]", function(e) {
+        $(document).ready(function ($) {
+            $(document).on("click", "a[href^=#]", function (e) {
                 var id = $(this).attr("href");
                 if ($(id).length > 0) {
                     e.preventDefault();
