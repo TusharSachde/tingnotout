@@ -691,27 +691,27 @@
 
             currentscroll = $(window).scrollTop();
 
-//            $(window).scroll(function (data) {
-//                if (shouldscroll) {
-//                    console.log("Scrolling Startrs");
-//                    newcurrentscroll = $(window).scrollTop();
-//                    var scrollto = 0;
-//                    for (var i = 0; i < scrollstops.length; i++) {
-//                        if (scrollstops[i] > newcurrentscroll) {
-//                            scrollto = i;
-//                            break;
-//                        }
-//                    }
-//                    if (newcurrentscroll > currentscroll) {
-//                      //scroll down
-//                        scrollanimate(scrollstops[i]-5);
-//                    } if (newcurrentscroll < currentscroll) {
-//                        //scroll up
-//                        scrollanimate(scrollstops[i - 1]+5);
-//                    }
-//                    currentscroll = newcurrentscroll;
-//                }
-//            });
+            $(window).scroll(function (data) {
+                if (shouldscroll) {
+                    console.log("Scrolling Startrs");
+                    newcurrentscroll = $(window).scrollTop();
+                    var scrollto = 0;
+                    for (var i = 0; i < scrollstops.length; i++) {
+                        if (scrollstops[i] > newcurrentscroll) {
+                            scrollto = i;
+                            break;
+                        }
+                    }
+                    if (newcurrentscroll > currentscroll) {
+                      //scroll down
+                        scrollanimate(scrollstops[i]-5);
+                    } if (newcurrentscroll < currentscroll) {
+                        //scroll up
+                        scrollanimate(scrollstops[i - 1]+5);
+                    }
+                    currentscroll = newcurrentscroll;
+                }
+            });
 
 
 
