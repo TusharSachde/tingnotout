@@ -609,7 +609,7 @@
             // Scene Contact
             var scene = new ScrollScene({
                     triggerElement: "#footertrigger1",
-                    duration: 1500,
+                    duration: 800,
                     offset: 300
                 })
                 .setPin("#pin4")
@@ -639,7 +639,7 @@
 
             var body = $("html, body");
             var currentscroll = $(window).scrollTop();
-            var time = Math.abs(currentscroll - scrollto);
+            var time = Math.abs(currentscroll - scrollto)*2.4;
             body.animate({
                 scrollTop: scrollto
             }, time, 'linear', function () {
@@ -649,7 +649,7 @@
 
 
         $(document).ready(function () {
-            var scrollstops = [0, 1467, 2902, 4194, 5850];
+            var scrollstops = [0, 851,1467, 2902, 4194, 5850];
 
             currentscroll = $(window).scrollTop();
 
