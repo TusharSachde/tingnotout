@@ -596,45 +596,7 @@
         </div>
 
 
-        <div id="footertrigger1"></div>
-        <div class="fp-tableCell" style="height: 300px;" id="pin4">
-            <div class="microphone">
-                <img alt="microphone bubbe" class="microphoneonly" src="images/microphone_bubbe_01.png">
-                <img alt="microphone bubbe" class="bubbeonly" src="images/microphone_bubbe_02.png">
-
-            </div>
-            <div class="microphone-res">
-                <img alt="microphone bubbe" src="images/microphone_res.png">
-            </div>
-            <div class="address hided">
-                <p class="title">
-                    Contact Us
-                </p>
-                <p>
-                    <span class="equipments">200NOTOUT*</span>
-                    <br>104, Gyandeep Society, Gulmohar X Rd: 7,
-                    <br>J V P D, Mumbai 400049
-                </p>
-                <p>
-                    Mobile : <span class="equipments">+91-99300 20200</span>
-                    <br>Tel : <span class="equipments">+91-22-26206200</span>
-                    <br>
-                </p>
-                <p>
-                    If you'd like to work / freelance with us.
-                    <br>drop in your CV with your area of interest
-                    <br>and expertise on: <a class="equipments" href="mailto:info@200notout.in">info@200notout.in
-                    </a>
-                </p>
-                <p>
-                    Also avail services of our sister company
-                    <br>
-                    <a class="equipments" href="http://www.fceindia.com" target="_blank">Famos Cine Equipmentss</a>
-                    - one of the largest
-                    <br>film equipment rental companies in India.
-                </p>
-            </div>
-        </div>
+       
     </div>
 
     <script>
@@ -687,7 +649,7 @@
 
 
         $(document).ready(function () {
-            var scrollstops = [0, 1467, 2902, 4194, 6004, 7831];
+            var scrollstops = [0, 1467, 2902, 4194, 5850];
 
             currentscroll = $(window).scrollTop();
 
@@ -695,7 +657,7 @@
                 if (shouldscroll) {
                     console.log("Scrolling Startrs");
                     newcurrentscroll = $(window).scrollTop();
-                    var scrollto = 0;
+                    var scrollto = 5850;
                     for (var i = 0; i < scrollstops.length; i++) {
                         if (scrollstops[i] > newcurrentscroll) {
                             scrollto = i;
