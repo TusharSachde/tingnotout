@@ -715,6 +715,19 @@
                     }
                 }
             });
+
+
+            //tools hover effects
+            $(".tools li").hover(function() {
+                var img = $(this).data("rollover");
+                $(this).find("img").attr("src", "images/" + img + "-rollover.png");
+            }, function() {
+                var img = $(this).data("rollover");
+                if (!$(this).hasClass("active")) {
+                    $(this).find("img").attr("src", "images/" + img + ".png");
+                }
+            });
+
         });
     </script>
 
