@@ -50,8 +50,19 @@
     </script>
 
     <div class="stadium translateup">
-        <img src="images/stadium-light.png" alt="" class="img-responsive">
+        <img src="images/stadium-light.png" alt="" class="img-responsive" style="opacity:0;">
     </div>
+    <script>
+        $(document).ready(function() {
+            $('body').mousemove(function(e) {
+                var amountMovedX = (e.pageX * -1 / 150);
+                $(".stadium").css('background-position', amountMovedX + 'px');
+                console.log(amountMovedX);
+                console.log(amountMovedY);
+            });
+
+        });
+    </script>
     <!--Fixed Nav Bar-->
     <nav class="navbar-fixed-top navigator translateup">
         <div class="container navigation">
@@ -597,7 +608,7 @@
                     </p>
                 </div>
 
-                <footer class="footer" triggerElement="#footertrigger1" duration="100" offset="700" tocss="opacity:1;">
+                <footer class="footer">
                     <div class="container notout-footer">
                         <div class="copyright">
                             Copyright © 2015 · All Rights Reserved · 200NOTOUT
@@ -651,8 +662,8 @@
             })
                 .setTween(mic)
                 .addTo(controller);
-            
-             var scene = new ScrollScene({
+
+            var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 1000,
                 offset: 400
@@ -681,6 +692,17 @@
                 offset: 550
             })
                 .setTween(addresshow)
+                .addTo(controller);
+            
+            var footer = TweenMax.to(".footer", 1, {
+                className: "+=showed"
+            });
+            var scene = new ScrollScene({
+                triggerElement: "#footertrigger1",
+                duration: 100,
+                offset: 550
+            })
+                .setTween(footer)
                 .addTo(controller);
 
 

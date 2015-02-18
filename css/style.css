@@ -169,6 +169,12 @@ p.title {
     position: relative;
 }
 .stadium {
+    background: url('../images/stadium-light.png') no-repeat;
+    background-position: top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     width: 100%;
     position: fixed;
     top: 0;
