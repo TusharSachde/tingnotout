@@ -34,7 +34,7 @@
     <script src="js/jquery.jcarousel.min.js" type="text/javascript"></script>
     <script src="js/jcarousel.responsive.js" type="text/javascript"></script>
     <script src="js/cssjson.js" type="text/javascript"></script>
-    <script src="js/domscrollmagic.js" type="text/javascript"></script>
+    <!--    <script src="js/domscrollmagic.js" type="text/javascript"></script>-->
 
 
 </head>
@@ -57,7 +57,7 @@
         <div class="container navigation">
 
             <div class="logo">
-                <a href="#pin1" data-menuanchor="home">
+                <a href="#pin1">
                     <img src="images/logo-films.png" alt="200 Not Out" />
                 </a>
             </div>
@@ -150,7 +150,7 @@
                                 <div class="tools horizontal hided">
                                     <ul>
                                         <li data-rollover="films-icon" data-tab="tab-films" data-nav="films">
-                                            <a href="#our-innings">
+                                            <a href="page.html#films">
                                                 <div class="tool-icon">
                                                     <img src="images/films-icon.png" alt="films" />
                                                 </div>
@@ -160,7 +160,7 @@
                                             </a>
                                         </li>
                                         <li data-rollover="cinemas-icon" data-tab="tab-cinemas" data-nav="cinemas">
-                                            <a href="#our-innings">
+                                            <a href="page.html#cinemas">
                                                 <div class="tool-icon">
                                                     <img src="images/cinemas-icon.png" alt="cinemas" />
                                                 </div>
@@ -170,7 +170,7 @@
                                             </a>
                                         </li>
                                         <li data-rollover="entertainment-icon" data-tab="tab-entertainment" data-nav="entertainment">
-                                            <a href="#our-innings">
+                                            <a href="page.html#entertainment">
                                                 <div class="tool-icon">
                                                     <img src="images/entertainment-icon.png" alt="entertainment" />
                                                 </div>
@@ -372,7 +372,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
                         duration: 300,
-                        offset: 140
+                        offset: -160
                     })
                         .addTo(controller);
 
@@ -551,22 +551,24 @@
                         $(".things").toggle();
                     });
 
+
+
                 });
             </script>
 
 
             <div id="footertrigger1"></div>
-            <div class="fp-tableCell" style="height: 300px;" triggerElement="#footertrigger1" duration="800" offset="300" pin="true" id="pin4">
+            <div class="fp-tableCell" style="height: 300px;" id="pin4">
                 <div class="microphone">
-                    <img alt="microphone bubbe" class="microphoneonly" src="images/microphone_bubbe_01.png" triggerElement="#footertrigger1" duration="100" offset="400" tocss="-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg);opacity:1;">
+                    <img alt="microphone bubbe" class="microphoneonly" src="images/microphone_bubbe_01.png">
 
-                    <img alt="microphone bubbe" class="bubbeonly" src="images/microphone_bubbe_02.png" triggerElement="#footertrigger1" duration="100" offset="550" tocss="-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg);height:466px;">
+                    <img alt="microphone bubbe" class="bubbeonly" src="images/microphone_bubbe_02.png">
 
                 </div>
                 <div class="microphone-res">
                     <img alt="microphone bubbe" src="images/microphone_res.png">
                 </div>
-                <div class="address" triggerElement="#footertrigger1" duration="100" offset="700" tocss="opacity:1;">
+                <div class="address hided">
                     <p class="title">
                         Contact Us
                     </p>
@@ -622,7 +624,7 @@
             // Scene Contact
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
-                duration: 800,
+                duration: 700,
                 offset: 300
             })
                 .setPin("#pin4")
@@ -636,6 +638,49 @@
                 offset: 200
             })
                 .setTween(gotools)
+                .addTo(controller);
+
+
+            var mic = TweenMax.to(".microphoneonly", 1, {
+                className: "+=micgo"
+            });
+            var scene = new ScrollScene({
+                triggerElement: "#footertrigger1",
+                duration: 100,
+                offset: 300
+            })
+                .setTween(mic)
+                .addTo(controller);
+            
+             var scene = new ScrollScene({
+                triggerElement: "#footertrigger1",
+                duration: 1000,
+                offset: 400
+            })
+                .setClassToggle(".microphoneonly", "swing")
+                .addTo(controller);
+
+
+            var bubble = TweenMax.to(".bubbeonly", 1, {
+                className: "+=bubblego"
+            });
+            var scene = new ScrollScene({
+                triggerElement: "#footertrigger1",
+                duration: 100,
+                offset: 450
+            })
+                .setTween(bubble)
+                .addTo(controller);
+
+            var addresshow = TweenMax.to(".address.hided", 1, {
+                className: "+=showed"
+            });
+            var scene = new ScrollScene({
+                triggerElement: "#footertrigger1",
+                duration: 100,
+                offset: 550
+            })
+                .setTween(addresshow)
                 .addTo(controller);
 
 
@@ -662,7 +707,7 @@
 
 
         $(document).ready(function() {
-            var scrollstops = [0, 851, 1467, 2902, 4194, 5850];
+            var scrollstops = [0, 851, 1467, 2902, 4194, 5947];
 
             currentscroll = $(window).scrollTop();
 

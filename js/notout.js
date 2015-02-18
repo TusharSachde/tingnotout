@@ -241,3 +241,21 @@ var notOut = {
 $(function () {
     notOut.init();
 });
+
+$(document).ready(function() {
+    var sitehash=window.location.hash;
+    switch(sitehash)
+    {
+            case "#films":
+            notOut.selectTool($(".tools.verticle li").eq(0)); 
+            break;
+            case "#cinemas":
+            notOut.selectTool($(".tools.verticle li").eq(1)); 
+            break;
+            case "#entertainment":
+            notOut.selectTool($(".tools.verticle li").eq(2)); 
+            break;
+            
+    }
+    
+});
