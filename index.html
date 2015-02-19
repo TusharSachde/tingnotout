@@ -52,13 +52,15 @@
     <div class="stadium translateup">
         <img src="images/stadium-light.png" alt="" class="img-responsive" style="opacity:0;">
     </div>
+
+    <audio id="audio" autoplay loop>
+        <source src="sachin_sachin.mp3" type="audio/mpeg">
+    </audio>
     <script>
         $(document).ready(function() {
             $('body').mousemove(function(e) {
                 var amountMovedX = (e.pageX * -1 / 150);
                 $(".stadium").css('background-position', amountMovedX + 'px');
-                console.log(amountMovedX);
-                console.log(amountMovedY);
             });
 
         });
@@ -387,6 +389,14 @@
                     })
                         .addTo(controller);
 
+
+                    var scene = new ScrollScene({
+                        triggerElement: "#trigger2",
+                        duration: 300,
+                        offset: -160
+                    })
+                        .addTo(controller);
+
                     var stadium = TweenMax.to(".stadium", 1, {
                         className: "+=translatego"
                     });
@@ -397,6 +407,9 @@
                         duration: 300,
                         offset: 100
                     })
+                        .on("start", function(e) {
+                            audio.pause();
+                        })
                         .addTo(controller);
 
                     var umpire = TweenMax.to(".umpire.translatebot", 1, {
@@ -693,7 +706,7 @@
             })
                 .setTween(addresshow)
                 .addTo(controller);
-            
+
             var footer = TweenMax.to(".footer", 1, {
                 className: "+=showed"
             });
@@ -727,34 +740,34 @@
             });
         };
 
-
-        $(document).ready(function() {
-            var scrollstops = [0, 851, 1467, 2902, 4194, 5947];
-
-            currentscroll = $(window).scrollTop();
-
-            $(window).scroll(function(data) {
-                if (shouldscroll) {
-                    console.log("Scrolling Startrs");
-                    newcurrentscroll = $(window).scrollTop();
-                    var scrollto = 5850;
-                    for (var i = 0; i < scrollstops.length; i++) {
-                        if (scrollstops[i] > newcurrentscroll) {
-                            scrollto = i;
-                            break;
-                        }
-                    }
-                    if (newcurrentscroll > currentscroll) {
-                        //scroll down
-                        scrollanimate(scrollstops[i] - 5);
-                    }
-                    if (newcurrentscroll < currentscroll) {
-                        //scroll up
-                        scrollanimate(scrollstops[i - 1] + 5);
-                    }
-                    currentscroll = newcurrentscroll;
-                }
-            });
+         //
+         //        $(document).ready(function() {
+         //            var scrollstops = [0, 851, 1467, 2902, 4194, 5947];
+         //
+         //            currentscroll = $(window).scrollTop();
+         //
+         //            $(window).scroll(function(data) {
+         //                if (shouldscroll) {
+         //                    console.log("Scrolling Startrs");
+         //                    newcurrentscroll = $(window).scrollTop();
+         //                    var scrollto = 5850;
+         //                    for (var i = 0; i < scrollstops.length; i++) {
+         //                        if (scrollstops[i] > newcurrentscroll) {
+         //                            scrollto = i;
+         //                            break;
+         //                        }
+         //                    }
+         //                    if (newcurrentscroll > currentscroll) {
+         //                        //scroll down
+         //                        scrollanimate(scrollstops[i] - 5);
+         //                    }
+         //                    if (newcurrentscroll < currentscroll) {
+         //                        //scroll up
+         //                        scrollanimate(scrollstops[i - 1] + 5);
+         //                    }
+         //                    currentscroll = newcurrentscroll;
+         //                }
+         //            });
 
 
 

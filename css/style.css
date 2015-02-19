@@ -702,6 +702,7 @@ img.bubblego {
     right: 8%;
     top: 35%;
 }
+#audio {display: none;}
 .popman {
     position: absolute;
     right: -8%;
