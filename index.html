@@ -50,7 +50,8 @@
     </script>
 
     <div class="stadium translateup">
-        <img src="images/stadium-light.png" alt="" class="img-responsive" style="opacity:0;">
+
+        <img src="images/clicks.gif" alt="">
     </div>
 
     <audio id="audio" autoplay loop>
@@ -142,7 +143,7 @@
 
                             </div>
                             <div class="home-intro">
-                                <img src="images/down.png" alt="Enter" class="down showed updown" />
+                                <a href="#pin1"><img src="images/down.png" alt="Enter" class="down showed updown" /></a>
 
 
                                 <div class="text-up hided">
@@ -374,7 +375,7 @@
                     // Scene About Us 
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
-                        duration: 1300,
+                        duration: 1000,
                         offset: 140
                     })
                         .setPin("#pin2")
@@ -444,7 +445,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
                         duration: 300,
-                        offset: 1400
+                        offset: 1100
                     })
                         .addTo(controller);
 
@@ -456,7 +457,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
                         duration: 200,
-                        offset: 1400
+                        offset: 1100
                     })
                         .addTo(controller);
 
@@ -517,7 +518,7 @@
                     // Scene About Us 
                     var scene = new ScrollScene({
                         triggerElement: "#trigger3",
-                        duration: 1300,
+                        duration: 800,
                         offset: 140
                     })
                         .setPin("#pin3")
@@ -544,7 +545,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger3",
                         duration: 200,
-                        offset: 500
+                        offset: 450
                     })
                         .setTween(innings)
                         .addTo(controller);
@@ -555,7 +556,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger3",
                         duration: 100,
-                        offset: 650
+                        offset: 500
                     })
                         .setTween(innings1)
                         .addTo(controller);
@@ -566,7 +567,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger3",
                         duration: 100,
-                        offset: 1300
+                        offset: 800
                     })
                         .setTween(gocloud)
                         .addTo(controller);
@@ -740,34 +741,34 @@
             });
         };
 
-         //
-         //        $(document).ready(function() {
-         //            var scrollstops = [0, 851, 1467, 2902, 4194, 5947];
-         //
-         //            currentscroll = $(window).scrollTop();
-         //
-         //            $(window).scroll(function(data) {
-         //                if (shouldscroll) {
-         //                    console.log("Scrolling Startrs");
-         //                    newcurrentscroll = $(window).scrollTop();
-         //                    var scrollto = 5850;
-         //                    for (var i = 0; i < scrollstops.length; i++) {
-         //                        if (scrollstops[i] > newcurrentscroll) {
-         //                            scrollto = i;
-         //                            break;
-         //                        }
-         //                    }
-         //                    if (newcurrentscroll > currentscroll) {
-         //                        //scroll down
-         //                        scrollanimate(scrollstops[i] - 5);
-         //                    }
-         //                    if (newcurrentscroll < currentscroll) {
-         //                        //scroll up
-         //                        scrollanimate(scrollstops[i - 1] + 5);
-         //                    }
-         //                    currentscroll = newcurrentscroll;
-         //                }
-         //            });
+         
+                 $(document).ready(function() {
+                     var scrollstops = [0, 848, 1365, 2711, 3700, 4900];
+         
+                     currentscroll = $(window).scrollTop();
+         
+                     $(window).scroll(function(data) {
+                         if (shouldscroll) {
+                             console.log("Scrolling Startrs");
+                             newcurrentscroll = $(window).scrollTop();
+                             var scrollto = 5850;
+                             for (var i = 0; i < scrollstops.length; i++) {
+                                 if (scrollstops[i] > newcurrentscroll) {
+                                     scrollto = i;
+                                     break;
+                                 }
+                             }
+                             if (newcurrentscroll > currentscroll) {
+                                 //scroll down
+                                 scrollanimate(scrollstops[i] - 5);
+                             }
+                             if (newcurrentscroll < currentscroll) {
+                                 //scroll up
+                                 scrollanimate(scrollstops[i - 1] + 5);
+                             }
+                             currentscroll = newcurrentscroll;
+                         }
+                     });
 
 
 

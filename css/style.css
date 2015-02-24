@@ -182,7 +182,9 @@ p.title {
     z-index: -1;
 }
 .stadium img {
-    width: 100%
+    width: 100%;
+    max-height: 250px;
+    overflow: hidden;
 }
 #preview {
     cursor: pointer;
