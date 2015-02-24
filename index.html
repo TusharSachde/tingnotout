@@ -208,29 +208,33 @@
 
             <script>
                 $(document).ready(function($) {
-
-
+                    var winheight=($(window).height()/2);
+                    //var fromtop=$("#trigger1").offset();
+                    var offsetcorrect=winheight-200;
+                    
                     $("#pin1").mousemove(function(e) {
                         var x = e.clientX;
                         var y = e.clientY;
                     });
+                    
 
                     // scene Sachin
                     var scene = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 1500,
-                        offset: 140
+                        offset: offsetcorrect+1
                     })
                         .setPin("#pin1")
                         .addTo(controller);
-
+                    scene.addIndicators();
 
                     var cape = TweenMax.to(".cape", 1, {
                         className: "+=capedown"
                     });
 
                     scene.setTween(cape);
-
+                    scene.addIndicators();
+                    
                     scene.on("end", function(event) {
                         $(".cape").toggle();
                     });
