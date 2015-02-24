@@ -207,11 +207,12 @@
 
 
             <script>
+                offsetcorrect=0;
                 $(document).ready(function($) {
                     var winheight=($(window).height()/2);
                     //var fromtop=$("#trigger1").offset();
-                    var offsetcorrect=winheight-200;
-                    
+                    offsetcorrect=winheight-341;
+console.log("OFFSET:"+offsetcorrect);
                     $("#pin1").mousemove(function(e) {
                         var x = e.clientX;
                         var y = e.clientY;
@@ -222,7 +223,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 1500,
-                        offset: offsetcorrect+1
+                        offset: 140+offsetcorrect
                     })
                         .setPin("#pin1")
                         .addTo(controller);
@@ -243,7 +244,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 1,
-                        offset: 300
+                        offset: 300+offsetcorrect
                     })
                         .addTo(controller);
 
@@ -257,7 +258,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 500,
-                        offset: 600
+                        offset: 600+offsetcorrect
                     })
                         .addTo(controller);
 
@@ -270,7 +271,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 300,
-                        offset: 700
+                        offset: 700+offsetcorrect
                     })
                         .addTo(controller);
 
@@ -282,7 +283,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 400,
-                        offset: 1000
+                        offset: 1000+offsetcorrect
                     })
                         .addTo(controller);
 
@@ -296,7 +297,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 400,
-                        offset: 1000
+                        offset: 1000+offsetcorrect
                     })
                         .addTo(controller);
 
@@ -311,7 +312,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 200,
-                        offset: 1000
+                        offset: 1000+offsetcorrect
                     })
                         .addTo(controller);
 
@@ -380,7 +381,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
                         duration: 1000,
-                        offset: 140
+                        offset: 140+offsetcorrect
                     })
                         .setPin("#pin2")
                         .setClassToggle("#about-us", "active") // add class toggle
@@ -390,7 +391,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
                         duration: 300,
-                        offset: -160
+                        offset: -160+offsetcorrect
                     })
                         .addTo(controller);
 
@@ -398,7 +399,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
                         duration: 300,
-                        offset: -160
+                        offset: -160+offsetcorrect
                     })
                         .addTo(controller);
 
@@ -410,7 +411,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
                         duration: 300,
-                        offset: 100
+                        offset: 100+offsetcorrect
                     })
                         .on("start", function(e) {
                             audio.pause();
@@ -425,7 +426,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
                         duration: 400,
-                        offset: 400
+                        offset: 400+offsetcorrect
                     })
                         .addTo(controller);
 
@@ -437,7 +438,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
                         duration: 100,
-                        offset: 800
+                        offset: 800+offsetcorrect
                     })
                         .addTo(controller);
 
@@ -449,7 +450,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
                         duration: 300,
-                        offset: 1100
+                        offset: 1100+offsetcorrect
                     })
                         .addTo(controller);
 
@@ -461,7 +462,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
                         duration: 200,
-                        offset: 1100
+                        offset: 1100+offsetcorrect
                     })
                         .addTo(controller);
 
@@ -523,7 +524,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger3",
                         duration: 800,
-                        offset: 140
+                        offset: 140+offsetcorrect
                     })
                         .setPin("#pin3")
                         .setClassToggle("#our-innings", "active") // add class toggle
@@ -537,7 +538,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger3",
                         duration: 400,
-                        offset: 250
+                        offset: 250+offsetcorrect
                     })
                         .setTween(popup)
                         .addTo(controller);
@@ -549,7 +550,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger3",
                         duration: 200,
-                        offset: 450
+                        offset: 450+offsetcorrect
                     })
                         .setTween(innings)
                         .addTo(controller);
@@ -560,7 +561,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger3",
                         duration: 100,
-                        offset: 500
+                        offset: 500+offsetcorrect
                     })
                         .setTween(innings1)
                         .addTo(controller);
@@ -571,7 +572,7 @@
                     var scene = new ScrollScene({
                         triggerElement: "#trigger3",
                         duration: 100,
-                        offset: 800
+                        offset: 800+offsetcorrect
                     })
                         .setTween(gocloud)
                         .addTo(controller);
@@ -654,7 +655,7 @@
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 700,
-                offset: 300
+                offset: 300+offsetcorrect
             })
                 .setPin("#pin4")
                 .setTween(gotools)
@@ -664,7 +665,7 @@
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 100,
-                offset: 200
+                offset: 200+offsetcorrect
             })
                 .setTween(gotools)
                 .addTo(controller);
@@ -676,7 +677,7 @@
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 100,
-                offset: 300
+                offset: 300+offsetcorrect
             })
                 .setTween(mic)
                 .addTo(controller);
@@ -684,7 +685,7 @@
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 1000,
-                offset: 400
+                offset: 400+offsetcorrect
             })
                 .setClassToggle(".microphoneonly", "swing")
                 .addTo(controller);
@@ -696,7 +697,7 @@
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 100,
-                offset: 450
+                offset: 450+offsetcorrect
             })
                 .setTween(bubble)
                 .addTo(controller);
@@ -707,7 +708,7 @@
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 100,
-                offset: 550
+                offset: 550+offsetcorrect
             })
                 .setTween(addresshow)
                 .addTo(controller);
@@ -718,7 +719,7 @@
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 100,
-                offset: 550
+                offset: 550+offsetcorrect
             })
                 .setTween(footer)
                 .addTo(controller);
