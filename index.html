@@ -227,14 +227,14 @@ console.log("OFFSET:"+offsetcorrect);
                     })
                         .setPin("#pin1")
                         .addTo(controller);
-                    scene.addIndicators();
+                    // scene.addIndicators();
 
                     var cape = TweenMax.to(".cape", 1, {
                         className: "+=capedown"
                     });
 
                     scene.setTween(cape);
-                    scene.addIndicators();
+                    // scene.addIndicators();
                     
                     scene.on("end", function(event) {
                         $(".cape").toggle();
@@ -654,14 +654,14 @@ console.log("OFFSET:"+offsetcorrect);
             // Scene Contact
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
-                duration: 700,
+                duration: 700+$(window).height(),
                 offset: 300+offsetcorrect
             })
                 .setPin("#pin4")
                 .setTween(gotools)
                 .setClassToggle("#contact-us", "active") // add class toggle
             .addTo(controller);
-
+// scene.addIndicators();
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 100,
@@ -669,7 +669,7 @@ console.log("OFFSET:"+offsetcorrect);
             })
                 .setTween(gotools)
                 .addTo(controller);
-
+// scene.addIndicators();
 
             var mic = TweenMax.to(".microphoneonly", 1, {
                 className: "+=micgo"
@@ -681,7 +681,7 @@ console.log("OFFSET:"+offsetcorrect);
             })
                 .setTween(mic)
                 .addTo(controller);
-
+// scene.addIndicators();
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 1000,
@@ -689,7 +689,7 @@ console.log("OFFSET:"+offsetcorrect);
             })
                 .setClassToggle(".microphoneonly", "swing")
                 .addTo(controller);
-
+// scene.addIndicators();
 
             var bubble = TweenMax.to(".bubbeonly", 1, {
                 className: "+=bubblego"
@@ -701,7 +701,7 @@ console.log("OFFSET:"+offsetcorrect);
             })
                 .setTween(bubble)
                 .addTo(controller);
-
+// scene.addIndicators();
             var addresshow = TweenMax.to(".address.hided", 1, {
                 className: "+=showed"
             });
@@ -712,7 +712,7 @@ console.log("OFFSET:"+offsetcorrect);
             })
                 .setTween(addresshow)
                 .addTo(controller);
-
+// scene.addIndicators();
             var footer = TweenMax.to(".footer", 1, {
                 className: "+=showed"
             });
@@ -723,7 +723,7 @@ console.log("OFFSET:"+offsetcorrect);
             })
                 .setTween(footer)
                 .addTo(controller);
-
+// scene.addIndicators();
 
         });
     </script>
@@ -748,7 +748,9 @@ console.log("OFFSET:"+offsetcorrect);
 
          
                  $(document).ready(function() {
-                     var scrollstops = [0, 848, 1365, 2711, 3700, 4750];
+                     var last=($(document).height()-$(window).height()*1.5 );
+                     console.log("LAST: "+last);
+                     var scrollstops = [0, 848, 1365, 2711, 3700, last];
          
                      currentscroll = $(window).scrollTop();
          
@@ -756,7 +758,7 @@ console.log("OFFSET:"+offsetcorrect);
                          if (shouldscroll) {
                              console.log("Scrolling Startrs");
                              newcurrentscroll = $(window).scrollTop();
-                             var scrollto = 5850;
+                             var scrollto = last;
                              for (var i = 0; i < scrollstops.length; i++) {
                                  if (scrollstops[i] > newcurrentscroll) {
                                      scrollto = i;
@@ -765,7 +767,14 @@ console.log("OFFSET:"+offsetcorrect);
                              }
                              if (newcurrentscroll > currentscroll) {
                                  //scroll down
-                                 scrollanimate(scrollstops[i] - 5);
+                                 if(scrollto==last)
+                                 {
+                                     scrollanimate(scrollstops[i - 1] + 5);
+                                 }
+                                 else
+                                 {
+                                    scrollanimate(scrollstops[i] - 5);
+                                 }
                              }
                              if (newcurrentscroll < currentscroll) {
                                  //scroll up
