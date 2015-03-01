@@ -769,16 +769,16 @@ console.log("OFFSET:"+offsetcorrect);
                                  //scroll down
                                  if(scrollto==last)
                                  {
-                                     scrollanimate(scrollstops[i - 1] + 5);
+                                     scrollanimate(scrollstops[i - 1] + 1);
                                  }
                                  else
                                  {
-                                    scrollanimate(scrollstops[i] - 5);
+                                    scrollanimate(scrollstops[i] - 1);
                                  }
                              }
                              if (newcurrentscroll < currentscroll) {
                                  //scroll up
-                                 scrollanimate(scrollstops[i - 1] + 5);
+                                 scrollanimate(scrollstops[i - 1] + 1);
                              }
                              currentscroll = newcurrentscroll;
                          }
