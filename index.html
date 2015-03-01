@@ -54,7 +54,7 @@
         <img src="images/clicks.gif" alt="">
     </div>
 
-    <audio id="audio" autoplay loop>
+    <audio id="audio" autoplay>
         <source src="sachin_sachin.mp3" type="audio/mpeg">
     </audio>
     <script>
@@ -138,12 +138,14 @@
                         <div id="trigger1"></div>
                         <div id="pin1">
                             <div class="sachin preview">
-                                <img src="images/sachin-cape.png" alt="sachin-cape" class="cape">
+                                <!--<img src="images/sachin-cape.png" alt="sachin-cape" class="cape">-->
                                 <img src="images/sachin-tendulkar.png" alt="sachin-tendulkar" />
 
                             </div>
                             <div class="home-intro">
-                                <a href="#pin1"><img src="images/down.png" alt="Enter" class="down showed updown" /></a>
+                                <a href="#pin1">
+                                    <img src="images/down.png" alt="Enter" class="down showed updown" />
+                                </a>
 
 
                                 <div class="text-up hided">
@@ -207,23 +209,23 @@
 
 
             <script>
-                offsetcorrect=0;
+                offsetcorrect = 0;
                 $(document).ready(function($) {
-                    var winheight=($(window).height()/2);
+                    var winheight = ($(window).height() / 2);
                     //var fromtop=$("#trigger1").offset();
-                    offsetcorrect=winheight-341;
-console.log("OFFSET:"+offsetcorrect);
+                    offsetcorrect = winheight - 341;
+                    console.log("OFFSET:" + offsetcorrect);
                     $("#pin1").mousemove(function(e) {
                         var x = e.clientX;
                         var y = e.clientY;
                     });
-                    
+
 
                     // scene Sachin
                     var scene = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 1500,
-                        offset: 140+offsetcorrect
+                        offset: 140 + offsetcorrect
                     })
                         .setPin("#pin1")
                         .addTo(controller);
@@ -235,7 +237,7 @@ console.log("OFFSET:"+offsetcorrect);
 
                     scene.setTween(cape);
                     // scene.addIndicators();
-                    
+
                     scene.on("end", function(event) {
                         $(".cape").toggle();
                     });
@@ -244,7 +246,7 @@ console.log("OFFSET:"+offsetcorrect);
                     var scene = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 1,
-                        offset: 300+offsetcorrect
+                        offset: 300 + offsetcorrect
                     })
                         .addTo(controller);
 
@@ -258,7 +260,7 @@ console.log("OFFSET:"+offsetcorrect);
                     var scene = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 500,
-                        offset: 600+offsetcorrect
+                        offset: 600 + offsetcorrect
                     })
                         .addTo(controller);
 
@@ -271,7 +273,7 @@ console.log("OFFSET:"+offsetcorrect);
                     var scene = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 300,
-                        offset: 700+offsetcorrect
+                        offset: 700 + offsetcorrect
                     })
                         .addTo(controller);
 
@@ -283,7 +285,7 @@ console.log("OFFSET:"+offsetcorrect);
                     var scene = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 400,
-                        offset: 1000+offsetcorrect
+                        offset: 1000 + offsetcorrect
                     })
                         .addTo(controller);
 
@@ -297,7 +299,7 @@ console.log("OFFSET:"+offsetcorrect);
                     var scene = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 400,
-                        offset: 1000+offsetcorrect
+                        offset: 1000 + offsetcorrect
                     })
                         .addTo(controller);
 
@@ -312,7 +314,7 @@ console.log("OFFSET:"+offsetcorrect);
                     var scene = new ScrollScene({
                         triggerElement: "#trigger1",
                         duration: 200,
-                        offset: 1000+offsetcorrect
+                        offset: 1000 + offsetcorrect
                     })
                         .addTo(controller);
 
@@ -381,7 +383,7 @@ console.log("OFFSET:"+offsetcorrect);
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
                         duration: 1000,
-                        offset: 140+offsetcorrect
+                        offset: 140 + offsetcorrect
                     })
                         .setPin("#pin2")
                         .setClassToggle("#about-us", "active") // add class toggle
@@ -391,7 +393,7 @@ console.log("OFFSET:"+offsetcorrect);
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
                         duration: 300,
-                        offset: -160+offsetcorrect
+                        offset: -160 + offsetcorrect
                     })
                         .addTo(controller);
 
@@ -399,7 +401,7 @@ console.log("OFFSET:"+offsetcorrect);
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
                         duration: 300,
-                        offset: -160+offsetcorrect
+                        offset: -160 + offsetcorrect
                     })
                         .addTo(controller);
 
@@ -411,7 +413,7 @@ console.log("OFFSET:"+offsetcorrect);
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
                         duration: 300,
-                        offset: 100+offsetcorrect
+                        offset: 100 + offsetcorrect
                     })
                         .on("start", function(e) {
                             audio.pause();
@@ -426,7 +428,7 @@ console.log("OFFSET:"+offsetcorrect);
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
                         duration: 400,
-                        offset: 400+offsetcorrect
+                        offset: 400 + offsetcorrect
                     })
                         .addTo(controller);
 
@@ -438,7 +440,7 @@ console.log("OFFSET:"+offsetcorrect);
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
                         duration: 100,
-                        offset: 800+offsetcorrect
+                        offset: 800 + offsetcorrect
                     })
                         .addTo(controller);
 
@@ -450,7 +452,7 @@ console.log("OFFSET:"+offsetcorrect);
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
                         duration: 300,
-                        offset: 1100+offsetcorrect
+                        offset: 1100 + offsetcorrect
                     })
                         .addTo(controller);
 
@@ -462,7 +464,7 @@ console.log("OFFSET:"+offsetcorrect);
                     var scene = new ScrollScene({
                         triggerElement: "#trigger2",
                         duration: 200,
-                        offset: 1100+offsetcorrect
+                        offset: 1100 + offsetcorrect
                     })
                         .addTo(controller);
 
@@ -484,7 +486,7 @@ console.log("OFFSET:"+offsetcorrect);
             <div class="section-services" id="pin3">
                 <div class="hided innings1">
                     <div class="service-popcorn flying2">
-                        <img alt="cloud-service" src="images/service-popcorn.png" class="service-popcorn" />
+                        <img alt="cloud-service" src="images/service-popcorn.png" class="service-popcorn hidden" />
                     </div>
 
                     <div class="things">
@@ -524,7 +526,7 @@ console.log("OFFSET:"+offsetcorrect);
                     var scene = new ScrollScene({
                         triggerElement: "#trigger3",
                         duration: 800,
-                        offset: 140+offsetcorrect
+                        offset: 140 + offsetcorrect
                     })
                         .setPin("#pin3")
                         .setClassToggle("#our-innings", "active") // add class toggle
@@ -538,7 +540,7 @@ console.log("OFFSET:"+offsetcorrect);
                     var scene = new ScrollScene({
                         triggerElement: "#trigger3",
                         duration: 400,
-                        offset: 250+offsetcorrect
+                        offset: 250 + offsetcorrect
                     })
                         .setTween(popup)
                         .addTo(controller);
@@ -550,7 +552,7 @@ console.log("OFFSET:"+offsetcorrect);
                     var scene = new ScrollScene({
                         triggerElement: "#trigger3",
                         duration: 200,
-                        offset: 450+offsetcorrect
+                        offset: 450 + offsetcorrect
                     })
                         .setTween(innings)
                         .addTo(controller);
@@ -561,7 +563,7 @@ console.log("OFFSET:"+offsetcorrect);
                     var scene = new ScrollScene({
                         triggerElement: "#trigger3",
                         duration: 100,
-                        offset: 500+offsetcorrect
+                        offset: 500 + offsetcorrect
                     })
                         .setTween(innings1)
                         .addTo(controller);
@@ -572,7 +574,7 @@ console.log("OFFSET:"+offsetcorrect);
                     var scene = new ScrollScene({
                         triggerElement: "#trigger3",
                         duration: 100,
-                        offset: 800+offsetcorrect
+                        offset: 800 + offsetcorrect
                     })
                         .setTween(gocloud)
                         .addTo(controller);
@@ -654,22 +656,22 @@ console.log("OFFSET:"+offsetcorrect);
             // Scene Contact
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
-                duration: 700+$(window).height(),
-                offset: 300+offsetcorrect
+                duration: 700 + $(window).height(),
+                offset: 300 + offsetcorrect
             })
                 .setPin("#pin4")
                 .setTween(gotools)
                 .setClassToggle("#contact-us", "active") // add class toggle
             .addTo(controller);
-// scene.addIndicators();
+            // scene.addIndicators();
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 100,
-                offset: 200+offsetcorrect
+                offset: 200 + offsetcorrect
             })
                 .setTween(gotools)
                 .addTo(controller);
-// scene.addIndicators();
+            // scene.addIndicators();
 
             var mic = TweenMax.to(".microphoneonly", 1, {
                 className: "+=micgo"
@@ -677,19 +679,19 @@ console.log("OFFSET:"+offsetcorrect);
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 100,
-                offset: 300+offsetcorrect
+                offset: 300 + offsetcorrect
             })
                 .setTween(mic)
                 .addTo(controller);
-// scene.addIndicators();
+            // scene.addIndicators();
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 1000,
-                offset: 400+offsetcorrect
+                offset: 400 + offsetcorrect
             })
                 .setClassToggle(".microphoneonly", "swing")
                 .addTo(controller);
-// scene.addIndicators();
+            // scene.addIndicators();
 
             var bubble = TweenMax.to(".bubbeonly", 1, {
                 className: "+=bubblego"
@@ -697,33 +699,33 @@ console.log("OFFSET:"+offsetcorrect);
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 100,
-                offset: 450+offsetcorrect
+                offset: 450 + offsetcorrect
             })
                 .setTween(bubble)
                 .addTo(controller);
-// scene.addIndicators();
+            // scene.addIndicators();
             var addresshow = TweenMax.to(".address.hided", 1, {
                 className: "+=showed"
             });
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 100,
-                offset: 550+offsetcorrect
+                offset: 550 + offsetcorrect
             })
                 .setTween(addresshow)
                 .addTo(controller);
-// scene.addIndicators();
+            // scene.addIndicators();
             var footer = TweenMax.to(".footer", 1, {
                 className: "+=showed"
             });
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 100,
-                offset: 550+offsetcorrect
+                offset: 550 + offsetcorrect
             })
                 .setTween(footer)
                 .addTo(controller);
-// scene.addIndicators();
+            // scene.addIndicators();
 
         });
     </script>
@@ -746,43 +748,40 @@ console.log("OFFSET:"+offsetcorrect);
             });
         };
 
-         
-                 $(document).ready(function() {
-                     var last=($(document).height()-$(window).height()*1.5 );
-                     console.log("LAST: "+last);
-                     var scrollstops = [0, 848, 1365, 2711, 3700, last];
-         
-                     currentscroll = $(window).scrollTop();
-         
-                     $(window).scroll(function(data) {
-                         if (shouldscroll) {
-                             console.log("Scrolling Startrs");
-                             newcurrentscroll = $(window).scrollTop();
-                             var scrollto = last;
-                             for (var i = 0; i < scrollstops.length; i++) {
-                                 if (scrollstops[i] > newcurrentscroll) {
-                                     scrollto = i;
-                                     break;
-                                 }
-                             }
-                             if (newcurrentscroll > currentscroll) {
-                                 //scroll down
-                                 if(scrollto==last)
-                                 {
-                                     scrollanimate(scrollstops[i - 1] + 1);
-                                 }
-                                 else
-                                 {
-                                    scrollanimate(scrollstops[i] - 1);
-                                 }
-                             }
-                             if (newcurrentscroll < currentscroll) {
-                                 //scroll up
-                                 scrollanimate(scrollstops[i - 1] + 1);
-                             }
-                             currentscroll = newcurrentscroll;
-                         }
-                     });
+
+        $(document).ready(function() {
+            var last = ($(document).height() - $(window).height() * 1.5);
+            console.log("LAST: " + last);
+            var scrollstops = [0, 848, 1365, 2711, 3700, last];
+
+            currentscroll = $(window).scrollTop();
+
+            $(window).scroll(function(data) {
+                if (shouldscroll) {
+                    console.log("Scrolling Startrs");
+                    newcurrentscroll = $(window).scrollTop();
+                    var scrollto = last;
+                    for (var i = 0; i < scrollstops.length; i++) {
+                        if (scrollstops[i] > newcurrentscroll) {
+                            scrollto = i;
+                            break;
+                        }
+                    }
+                    if (newcurrentscroll > currentscroll) {
+                        //scroll down
+                        if (scrollto == last) {
+                            scrollanimate(scrollstops[i - 1] + 1);
+                        } else {
+                            scrollanimate(scrollstops[i] - 1);
+                        }
+                    }
+                    if (newcurrentscroll < currentscroll) {
+                        //scroll up
+                        scrollanimate(scrollstops[i - 1] + 1);
+                    }
+                    currentscroll = newcurrentscroll;
+                }
+            });
 
 
 
