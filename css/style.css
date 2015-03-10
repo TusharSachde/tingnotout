@@ -747,7 +747,7 @@ img.bubblego {
     height: 466px;
 }
 .keypad {
-    z-index: 999;
+    z-index: 999999;
     position: fixed;
     height: 100%;
     right: 10px;

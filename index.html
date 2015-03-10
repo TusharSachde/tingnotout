@@ -99,10 +99,10 @@
     <!--Fixed Nav Bar-->
 
     <div class="keypad hided">
-        <a href="" class="upper">
+        <a style="cursor:pointer;" class="upper">
             <img src="images/down.png" alt="">
         </a>
-        <a href="" class="downer">
+        <a style="cursor:pointer;" class="downer">
             <img src="images/down.png" alt="">
         </a>
     </div>
@@ -717,7 +717,7 @@
                 .setClassToggle("#contact-us", "active") // add class toggle
             .addTo(controller);
 
-            
+
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 100,
@@ -738,7 +738,7 @@
                 .setTween(mic)
                 .addTo(controller);
 
-            
+
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 1000,
@@ -759,7 +759,7 @@
                 .setTween(bubble)
                 .addTo(controller);
 
-            
+
             var addresshow = TweenMax.to(".address.hided", 1, {
                 className: "+=showed"
             });
@@ -770,7 +770,7 @@
             })
                 .setTween(addresshow)
                 .addTo(controller);
-            
+
 
             var nodowner = TweenMax.to(".downer", 1, {
                 className: "+=hided"
@@ -782,9 +782,9 @@
             })
                 .setTween(nodowner)
                 .addTo(controller);
-            
-            
-            
+
+
+
             var footer = TweenMax.to(".footer", 1, {
                 className: "+=showed"
             });
@@ -856,6 +856,47 @@
             });
 
 
+            $(".keypad .upper").click(function() {
+
+                console.log("Up arrow pressed " + shouldscroll);
+
+                newcurrentscroll = $(window).scrollTop();
+                newcurrentscroll -= 10;
+                var scrollto = last;
+                for (var i = 0; i < scrollstops.length; i++) {
+                    if (scrollstops[i] > newcurrentscroll) {
+                        scrollto = i;
+                        break;
+                    }
+                }
+
+                scrollanimate(scrollstops[i - 1] + 1);
+
+            });
+
+            $(".keypad .downer").click(function() {
+
+                console.log("Down arrow pressed " + shouldscroll);
+
+                newcurrentscroll = $(window).scrollTop();
+                console.log(newcurrentscroll);
+                newcurrentscroll += 10;
+                var scrollto = last;
+                for (var i = 0; i < scrollstops.length; i++) {
+                    if (scrollstops[i] > newcurrentscroll) {
+                        scrollto = i;
+                        break;
+                    }
+                }
+
+                if (scrollto == last) {
+                    scrollanimate(scrollstops[i - 1] + 1);
+                } else {
+                    scrollanimate(scrollstops[i] - 1);
+                }
+
+            });
+
 
         });
     </script>
@@ -893,6 +934,9 @@
                     $(this).find("img").attr("src", "images/" + img + ".png");
                 }
             });
+
+
+
 
         });
     </script>
