@@ -20,6 +20,36 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+
+    <script>
+        var isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function() {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function() {
+                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+            }
+        };
+
+        if (isMobile.any()) {
+            window.location = "http://www.200notout.in/mobile";
+        }
+    </script>
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -67,6 +97,16 @@
         });
     </script>
     <!--Fixed Nav Bar-->
+
+    <div class="keypad hided">
+        <a href="" class="upper">
+            <img src="images/down.png" alt="">
+        </a>
+        <a href="" class="downer">
+            <img src="images/down.png" alt="">
+        </a>
+    </div>
+
     <nav class="navbar-fixed-top navigator translateup">
         <div class="container navigation">
 
@@ -111,7 +151,7 @@
                 <li id="our-innings">
                     <a href="#pin3">Our Innings</a>
                     <!--<ul>
-                        <li><a>Films</a></li>
+                        <li><a>Fiilms</a></li>
                         <li><a>Cinemas</a></li>
                         <li><a>Entertainment</a></li>
                     </ul>-->
@@ -158,7 +198,9 @@
                                     <p>
                                         The name of our production house - 200NOTOUT* is a tribute to this extraordinary, spirited innings of the master-blaster.
                                     </p>
-                                    <img src="images/notout200text.png" alt="200 not out" class="preview-logo-text" />
+                                    <a href="#pin1">
+                                        <img src="images/notout200text.png" alt="200 not out" class="preview-logo-text" />
+                                    </a>
                                 </div>
 
 
@@ -171,7 +213,7 @@
                                                     <img src="images/films-icon.png" alt="films" />
                                                 </div>
                                                 <p class="caption">
-                                                    Films
+                                                    Fiilms
                                                 </p>
                                             </a>
                                         </li>
@@ -253,7 +295,6 @@
                     var down = TweenMax.to(".down.showed", 1, {
                         className: "+=hidden"
                     });
-
                     scene.setTween(down);
 
 
@@ -263,12 +304,24 @@
                         offset: 600 + offsetcorrect
                     })
                         .addTo(controller);
+                    var keypad = TweenMax.to(".keypad.hided", 1, {
+                        className: "+=showed"
+                    });
+                    scene.setTween(keypad);
 
+
+                    var scene = new ScrollScene({
+                        triggerElement: "#trigger1",
+                        duration: 500,
+                        offset: 600 + offsetcorrect
+                    })
+                        .addTo(controller);
                     var textup = TweenMax.to(".text-up.hided", 1, {
                         className: "+=showed"
                     });
 
                     scene.setTween(textup);
+
 
                     var scene = new ScrollScene({
                         triggerElement: "#trigger1",
@@ -340,17 +393,17 @@
 
 
                 <div class="balls hided">
-                    <div class="flying-ball-real flying">
-                        <img src="images/flying-ball-real.png" alt="flying-ball-real" />
+                    <div class="flying-ball-real">
+                        <img src="images/reb-ball.png" alt="flying-ball-real" />
                     </div>
                     <div class="flying-ball-white-small">
-                        <img src="images/flying-ball-white-small.png" alt="flying-ball-white-small" />
+                        <img src="images/white-ball.png" alt="flying-ball-white-small" />
                     </div>
                     <div class="flying-ball-white">
-                        <img src="images/flying-ball-white.png" alt="flying-ball-white" />
+                        <img src="images/white-ball.png" alt="flying-ball-white" />
                     </div>
-                    <div class="flying-ball-real-small flying2">
-                        <img src="images/flying-ball-real-small.png" alt="flying-ball-real-small" />
+                    <div class="flying-ball-real-small">
+                        <img src="images/reb-ball.png" alt="flying-ball-real-small" />
                     </div>
                 </div>
 
@@ -663,7 +716,8 @@
                 .setTween(gotools)
                 .setClassToggle("#contact-us", "active") // add class toggle
             .addTo(controller);
-            // scene.addIndicators();
+
+            
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 100,
@@ -671,7 +725,7 @@
             })
                 .setTween(gotools)
                 .addTo(controller);
-            // scene.addIndicators();
+
 
             var mic = TweenMax.to(".microphoneonly", 1, {
                 className: "+=micgo"
@@ -683,7 +737,8 @@
             })
                 .setTween(mic)
                 .addTo(controller);
-            // scene.addIndicators();
+
+            
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 1000,
@@ -691,7 +746,7 @@
             })
                 .setClassToggle(".microphoneonly", "swing")
                 .addTo(controller);
-            // scene.addIndicators();
+
 
             var bubble = TweenMax.to(".bubbeonly", 1, {
                 className: "+=bubblego"
@@ -703,7 +758,8 @@
             })
                 .setTween(bubble)
                 .addTo(controller);
-            // scene.addIndicators();
+
+            
             var addresshow = TweenMax.to(".address.hided", 1, {
                 className: "+=showed"
             });
@@ -714,10 +770,26 @@
             })
                 .setTween(addresshow)
                 .addTo(controller);
-            // scene.addIndicators();
+            
+
+            var nodowner = TweenMax.to(".downer", 1, {
+                className: "+=hided"
+            });
+            var scene = new ScrollScene({
+                triggerElement: "#footertrigger1",
+                duration: 100,
+                offset: 550 + offsetcorrect
+            })
+                .setTween(nodowner)
+                .addTo(controller);
+            
+            
+            
             var footer = TweenMax.to(".footer", 1, {
                 className: "+=showed"
             });
+
+
             var scene = new ScrollScene({
                 triggerElement: "#footertrigger1",
                 duration: 100,

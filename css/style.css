@@ -295,7 +295,7 @@ p.caption {
 }
 .flying-ball-real-small {
     position: absolute;
-    right: 8%;
+    right: 6%;
     bottom: 150px;
 }
 /*end about us*/
@@ -599,15 +599,19 @@ p.caption {
 }
 .hided {
     opacity: 0;
+    z-index: -1;
 }
 .showed {
     opacity: 1;
+    z-index: 99;
 }
 .goaway {
     opacity: 0;
+    z-index: -1;
 }
 .text-up {
     margin-top: 30px;
+    padding-bottom: 50px;
 }
 .spacer {
     min-height: 100px;
@@ -685,7 +689,7 @@ img.bubblego {
     position: fixed;
     width: 1200px;
     top: 10%;
-    height: 65%;
+    height: 330px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -704,7 +708,9 @@ img.bubblego {
     right: 8%;
     top: 35%;
 }
-#audio {display: none;}
+#audio {
+    display: none;
+}
 .popman {
     position: absolute;
     right: -8%;
@@ -739,6 +745,28 @@ img.bubblego {
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
     height: 466px;
+}
+.keypad {
+    z-index: 999;
+    position: fixed;
+    height: 100%;
+    right: 10px;
+    top: 0;
+}
+.keypad a {
+    display: inline-block;
+}
+a.downer {
+    bottom: 30px;
+    position: absolute;
+}
+a.upper {
+    margin-top: 30px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 /*Fly Animation*/
 
@@ -1025,8 +1053,6 @@ img.bubblego {
         transform: translateY(5px);
     }
 }
-
-
 @-webkit-keyframes swing {
     0% {
         -webkit-transform: rotate(-2.5deg);
@@ -1041,8 +1067,6 @@ img.bubblego {
         transform: rotate(-2.5deg);
     }
 }
-
-
 @-moz-keyframes swing {
     0% {
         -moz-transform: rotate(-2.5deg);
@@ -1057,8 +1081,6 @@ img.bubblego {
         transform: rotate(-2.5deg);
     }
 }
-
-
 @-o-keyframes swing {
     0% {
         -o-transform: rotate(-2.5deg);
@@ -1073,8 +1095,6 @@ img.bubblego {
         transform: rotate(-2.5deg);
     }
 }
-
-
 @keyframes swing {
     0% {
         -webkit-transform: rotate(-2.5deg);
